@@ -75,6 +75,96 @@ body {
   text-align: justify;
 }
 
+.btn-section {
+  background: #150958;
+  color: #fff !important;
+  border-radius: 0px !important;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  margin: 30px 0;
+}
+
+.btn-section:hover {
+  background: #fff;
+  color: #150958;
+  border: 1px solid #150958;
+}
+
+.curso-home {
+  background: #f5f5f5;
+  padding: 20px 0;
+}
+
+.titulo-curso {
+  color: #505a78;
+  font-weight: bold;
+}
+
+.desc-curso {
+  text-align: justify;
+  font-size: 13px;
+}
+
+.banner-lateral {
+  margin-top: 30px;
+}
+
+.box-curso {
+  margin-top: 30px;
+}
+
+.btn-curso-home {
+  background: #7cdf95;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+  font-size: 18px !important;
+  margin-top: 10px;
+  border: 1px solid transparent;
+}
+
+.btn-curso-home:hover {
+  background: #fff;
+  color: #7cdf95 !important;
+  border: 1px solid #7cdf95;
+  transition-duration: 0.5s;
+}
+
+.box-noticia {
+  margin-top: 30px;
+}
+
+.titulo-noticia-home {
+  color: #505a78;
+  font-weight: bold;
+}
+
+.info-add-home {
+  display: block;
+  color: #505a78;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.btn-noticia-home {
+  background: #150958;
+  color: #fff !important;
+  border-radius: 0px !important;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  margin: 30px 0;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.btn-noticia-home:hover {
+  background: #fff;
+  color: #150958;
+  border: 1px solid #150958;
+}
+
+
+
 /***************************MENU*******************************/
 
 .navbar-brand {
