@@ -38,16 +38,17 @@
               <div class="contato-top">
                 <ul class="list-unstyled list-inline">
                   <li class="item-contato-top"><img src="images/phone.png" alt="" class="img-contato-top"> 3333-3333</li>
-                  <li><img src="images/mail.png" alt="" class="img-contato-top"></li>
+                  <li><img src="images/mail.png" alt="" class="img-contato-top">famart@famart.com.br</li>
                 </ul>
               </div>
             </div>
             <div class="col-md-4">
               <div class="social-top">
                 <ul class="list-unstyled list-inline">
-                  <li>teste</li>
-                  <li>teste</li>
-                  <li>teste</li>
+                  <li><a href="#"><img src="images/facebook.png" alt=""></a></li>
+                  <li><a href="#"><img src="images/twitter.png" alt=""></a></li>
+                  <li><a href="#"><img src="images/instagram.png" alt="" class="icon-social"></a></li>
+                  <li><a class="btn btn-area" href="#" role="button"><i class="fa fa-lock cadeado-area" aria-hidden="true"></i> Área do Aluno</a></li>
                 </ul>
               </div>
             </div>
@@ -56,7 +57,7 @@
       </section>
 
 
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-famart">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -70,13 +71,40 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+            <ul class="nav navbar-nav">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Instituição</a></li>
+              <li><a href="#">Graduação</a></li>
+              <li><a href="#">Cursos Livres</a></li>
+              <li><a href="#">Cursos de Extensão</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contato</a></li>
             </ul>
+            <a class="btn btn-agendado" href="#" role="button">Vestibulares Agendados</a>
           </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+        </div><!-- /.container-->
       </nav>
     </header>
+
+    <section class="banner">
+      <img src="images/banner-completo.jpg" alt="" class="img-responsive">
+    </section>
+
+    <section class="sobre">
+      <div class="container">
+        <div class="col-md-6">
+          <h2 class="titulo-section">Sobre<br> a Empresa</h2>
+          <p class="texto-sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/img.jpg" alt="" class="img-responsive center-block">
+        </div>
+      </div>
+    </section>
+
+
   </body>
 </html>

@@ -24,13 +24,78 @@ body {
 }
 
 .social-top {
-  margin: 30px 0;
+  margin: 25px 0;
+}
+
+.icon-social {
+  padding-right: 10px;
+}
+
+.btn-area {
+  background: #fff;
+  color: #150958;
+  padding: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+  border: 1px solid transparent;
+}
+
+.btn-area:hover {
+  background: #150958;
+  color: #fff !important;
+  border: 1px solid #fff;
+  transition-duration: 0.5s;
+}
+
+.cadeado-area {
+  margin-right: 5px;
+}
+
+.btn-agendado {
+  background: #7cdf95;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+  padding: 10px !important;
+  margin: 10px 0 0 10px;
+}
+
+.sobre {
+  margin: 50px 0;
+}
+
+.titulo-section {
+  color: #150958;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.texto-sobre {
+  text-align: justify;
 }
 
 /***************************MENU*******************************/
 
 .navbar-brand {
   height: auto !important;
+}
+
+.navbar-nav {
+  margin-top: 7px !important;
+}
+
+.navbar-famart .navbar-nav > li > a {
+  color: #150958;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar-famart .navbar-nav > li > a:hover,
+.navbar-famart .navbar-nav > li > a:focus {
+  background: #150958;
+  color: #fff;
+  transition-duration: 0.5s;
 }
 
 
