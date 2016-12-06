@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
+.bar-top {
+  background: #150958;
+  color: #fff;
+}
+
+.contato-top {
+  margin: 30px 0 0 60px;
+  font-size: 16px;
+}
+
+.item-contato-top {
+  margin-right: 15px;
+}
+
+.img-contato-top {
+  padding-right: 5px;
+}
+
+.social-top {
+  margin: 30px 0;
+}
+
+/***************************MENU*******************************/
+
+.navbar-brand {
+  height: auto !important;
+}
+
+
+/*************************************************************/
