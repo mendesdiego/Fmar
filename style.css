@@ -153,8 +153,8 @@ body {
   border: 1px solid transparent;
   text-transform: uppercase;
   margin: 30px 0;
-  padding-left: 40px !important;
-  padding-right: 40px !important;
+  padding-left: 80px !important;
+  padding-right: 80px !important;
 }
 
 .btn-noticia-home:hover {
@@ -163,7 +163,9 @@ body {
   border: 1px solid #150958;
 }
 
-
+.mapa {
+  margin-top: 40px;
+}
 
 /***************************MENU*******************************/
 
@@ -188,5 +190,41 @@ body {
   transition-duration: 0.5s;
 }
 
+/*************************************************************/
+
+/**************************FOOTER****************************/
+
+footer {
+  background: #150958;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.social-footer {
+  margin-top: 25px;
+}
+
+.titulo-footer {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 35px;
+}
+
+.menu-footer {
+  margin-top: 15px;
+}
+
+.link-menu-footer {
+  color: #fff;
+}
+
+.link-menu-footer:hover {
+  color: #7cdf95;
+  text-decoration: none;
+}
+
+.icon-menu-footer {
+  padding-right: 10px;
+}
 
 /*************************************************************/

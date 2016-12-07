@@ -226,5 +226,42 @@
       </div>
     </section>
 
+    <section class="mapa">
+      <img src="images/map.jpg" alt="" class="img-responsive">
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="col-md-4">
+          <img src="images/logo-baixo.png" alt="" class="img-responsive">
+          <div class="social-footer">
+            <ul class="list-unstyled list-inline">
+              <li><a href="#"><img src="images/facebook-baixo.png" alt=""></a></li>
+              <li><a href="#"><img src="images/twitter-baixo.png" alt=""></a></li>
+              <li><a href="#"><img src="images/instagram-logo.png" alt=""></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <h3 class="titulo-footer">Menu</h3>
+          <ul class="list-unstyled menu-footer">
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3 class="titulo-footer">Menu</h3>
+          <ul class="list-unstyled menu-footer">
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+            <li><img src="images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
