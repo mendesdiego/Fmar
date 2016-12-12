@@ -1,7 +1,28 @@
+/*
+Theme Name: Famart
+Theme URI:
+Author: Des: 4media Diretor de arte: Raphael Ribeiro  Dev e Front: Diego Mendes
+Author URI:
+Description: Thema desenvolvido por Diego Mendes e Raphael Ribeiro
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Bootstrap,HTML, CSS
+Text Domain: Restaurante paladino
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 body {
   font-family: 'Montserrat', sans-serif !important;
+}
+
+main {
+  min-height: 600px;
+  padding: 15px 0;
 }
 
 
@@ -165,6 +186,28 @@ body {
 
 .mapa {
   margin-top: 40px;
+}
+
+.titulo-interno {
+  color: #150958;
+}
+
+.texto-interno {
+  text-align: justify;
+}
+
+.img-institucional {
+  margin-top: 5px;
+}
+
+.quadro {
+  background: #f3f3f3;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.box-docente {
+  min-height: 280px;
 }
 
 /***************************MENU*******************************/
