@@ -38,19 +38,54 @@ function docentes_register() {
 	register_post_type('docente',$args);
 }
 
+add_action('init', 'cursos_register');
+function cursos_register() {
+	 $labels = array(
+			'name' => 'Cursos',
+			'singular_name' => 'Post',
+			'all_items' => 'Todos Cursos',
+			'add_new' => 'Adicionar Cursos',
+			'add_new_item' => 'Adicionar Cursos',
+			'edit_item' => 'Editar Cursos',
+			'new_item' => 'Novo Cursos',
+			'view_item' => 'Ver Cursos',
+			'search_items' => 'Procurar Cursos',
+			'not_found' =>  'Nada encontrado',
+			'not_found_in_trash' => 'Nada encontrado no lixo',
+			'parent_item_colon' => '',
+			'menu_icon'   => 'teste',
+	);
+	$args = array(
+ 			'menu_icon' => 'dashicons-portfolio',
+			'labels' => $labels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'query_var' => true,
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			'has_archive' => true,
+			'taxonomy' => array('categoria-curso'),
+			'menu_position' => 6,
+			'supports' => array('title','editor','comments','thumbnail','category','gallery','page-attributes'),
+			'rewrite' => array('slug' => 'curso')
+	  );
+	register_post_type('cursos',$args);
+}
+
 
 /* ----------------------------------------------------- */
 /* Taxonomias */
 /* ----------------------------------------------------- */
-/* Criando uma Taxonomia Personalizada
-register_taxonomy("categoria-Produto", array("produto"),
+/* Criando uma Taxonomia Personalizada*/
+register_taxonomy("categoria-curso", array("cursos"),
 	array(
 		"hierarchical" => true,
-		"label" => "categoria",
-		"singular_label" => "categoria Produto",
-		'rewrite' => array( 'slug' => 'categoria-produto' )
+		"label" => "Categorias",
+		"singular_label" => "categoria curso",
+		'rewrite' => array( 'slug' => 'categoria-curso' )
 	)
-);*/
+);
 
 /*******************************************************/
 
@@ -94,34 +129,3 @@ function custom_columns( $column, $post_id ) {
 			break;
 	}
 }
-
-/******************REGISTRANDO POST TYPE SOLUÇÕES********************************/
-
-$arrLabelsSolucoes= array(
-  'name' => 'Todas as soluções',
-  'add_new' => 'Adicionar solução',
-  'add_new_item' => 'Nova solução',
-  'edit_item' => 'Editar solução',
-  'new_item' => 'Ver solução',
-  'search_items' => 'Procurar pela solução',
-  'not_found' => 'Nenhum registro encontrado',
-  'not_found_in_trash' => 'Nada encotnrado na lixeira',
-  'menu_name' => 'Soluções'
-);
-// registrando post type soluções
-register_post_type('solucoes',  array(
-  'labels' => $arrLabelsSolucoes,
-  'public' => true,
-  'rewrite' => true,
-  'hierarchical' => true
-)) ;
-
-// registrando taxonomy para solucoes
-register_taxonomy("categorias-solucoes", "solucoes", array(
-  'label' => 'Categorias Solução',
-  'rewrite' => true,
-  'hierarchical' => true
-)) ;
-
-
-/*******************************************************************************/

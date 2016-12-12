@@ -1,26 +1,33 @@
 <?php /*Template Name: Cursos*/ ?>
-
-<?php get_header() ?>
+<?php  get_header(); ?>
 <main>
   <div class="container">
     <?php
-      $wpdocente = new WP_Query ( array(
-        'post_type' => 'docente' ,
-        'posts_per_page' => -1,
+      $wpcurso = new WP_Query ( array(
+        'post_type' => 'cursos' ,
         'orderby'   => 'title',
         'order'     => 'ASC',
+        'tax_query' => array(
+        		array(
+        			'taxonomy' => 'categoria-curso',
+        			'field' => 'slug',
+        			'terms' => 'graduacao'
+        		)
+        	)
         )
       );
-     ?>
+     ?>     
   <?php
-    if ($wpdocente->have_posts() ): ?>
+    if ($wpcurso->have_posts() ): ?>
       <div class="row">
-        <?php while ($wpdocente->have_posts() ): ?>
-          <?php $wpdocente-> the_post(); ?>
+        <?php while ($wpcurso->have_posts() ): ?>
+          <?php $wpcurso-> the_post(); ?>
         <div class="col-md-3">
           <div class="box-docente">
             <?php if (has_post_thumbnail() ): ?>
-              <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
+              <a href="<?php echo get_permalink() ?>">
+                <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
+              </a>
               <?php endif; ?>
               <h3 class="titulo-interno"><?php echo get_the_title() ?></h3>
               <p><?php the_content() ?></p>
