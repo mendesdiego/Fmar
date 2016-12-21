@@ -73,6 +73,41 @@ function cursos_register() {
 	register_post_type('cursos',$args);
 }
 
+add_action('init', 'galeria_register');
+function galeria_register() {
+	 $labels = array(
+			'name' => 'Galeria',
+			'singular_name' => 'Post',
+			'all_items' => 'Todas as Galerias',
+			'add_new' => 'Adicionar Galeria',
+			'add_new_item' => 'Adicionar Galeria',
+			'edit_item' => 'Editar Galeria',
+			'new_item' => 'Nova Galeria',
+			'view_item' => 'Ver Galeria',
+			'search_items' => 'Procurar Galeria',
+			'not_found' =>  'Nada encontrado',
+			'not_found_in_trash' => 'Nada encontrado no lixo',
+			'parent_item_colon' => '',
+			'menu_icon'   => 'teste',
+	);
+	$args = array(
+ 			'menu_icon' => 'dashicons-portfolio',
+			'labels' => $labels,
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true,
+			'query_var' => true,
+			'capability_type' => 'post',
+			'hierarchical' => true,
+			'has_archive' => true,
+			'taxonomy' => array('categoria-galeria'),
+			'menu_position' => 6,
+			'supports' => array('title','editor','comments','thumbnail','category','gallery','page-attributes'),
+			'rewrite' => array('slug' => 'galeria')
+	  );
+	register_post_type('galeria',$args);
+}
+
 
 /* ----------------------------------------------------- */
 /* Taxonomias */
@@ -84,6 +119,15 @@ register_taxonomy("categoria-curso", array("cursos"),
 		"label" => "Categorias",
 		"singular_label" => "categoria curso",
 		'rewrite' => array( 'slug' => 'categoria-curso' )
+	)
+);
+
+register_taxonomy("categoria-galeria", array("galeria"),
+	array(
+		"hierarchical" => true,
+		"label" => "Categorias",
+		"singular_label" => "categoria galeria",
+		'rewrite' => array( 'slug' => 'categoria-galeria' )
 	)
 );
 

@@ -1,3 +1,5 @@
+<?php /*Template Name: Instalações*/ ?>
+
 <?php  get_header() ?>
 
 <?php if (have_posts()): ?>
@@ -7,32 +9,8 @@
       <section>
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
-              <h3 class="titulo-curso-saiba"><?php the_title(); ?></h3>
-              <div class="previa-curso">
-                <?php the_content(); ?>
-              </div>
-              <a class="btn btn-increva" href="#" role="button">Inscreva-se agora mesmo</a>
-            </div>
-            <div class="col-md-6">
-              <div class="box-info-add">
-                <p class="titulo-info-add">Informações Gerais</p>
-                <div class="item-info">
-                  <label>Duração</label>
-                  <p><?php echo get_field('duracao'); ?></p>
-                  <hr>
-
-                  <label>Tipo de Formação</label>
-                  <p><?php echo get_field('tipo_de_formacao'); ?></p>
-                  <hr>
-
-                  <label>Tipo de Curso</label>
-                  <p><?php echo get_field('tipo_de_formacao'); ?></p>
-                  <hr>
-
-                  <p><?php echo get_field('outras_informacoes'); ?></p>
-                </div>
-              </div>
+            <div class="col-md-12">
+              <?php the_content() ?>
             </div>
           </div>
 
@@ -44,13 +22,13 @@
                 <ul class="nav nav-tabs" role="tablist">
                   <?php
                     // check if the repeater field has rows of data
-                    if( have_rows('abas') ):
+                    if( have_rows('abas_galeria') ):
 
                       // loop through the rows of data
                       $i=0;
-                      while ( have_rows('abas') ) : the_row();?>
+                      while ( have_rows('abas_galeria') ) : the_row();?>
                           <li role="presentation" class="<?php echo ($i == 0) ? 'active' : null ?>"><a href="#<?php echo $i ?>" aria-controls="<?php echo $i ?>" role="tab" data-toggle="tab">
-                            <?php the_sub_field('nome_aba') ?></a></li>
+                            <?php the_sub_field('titulo_aba') ?></a></li>
 
                           <?php $i++ ?>
                         <?php
@@ -63,12 +41,33 @@
                 <div class="tab-content">
                   <?php
                     // check if the repeater field has rows of data
-                    if( have_rows('abas') ):
+                    if( have_rows('abas_galeria') ):
 
                       // loop through the rows of data
                       $i=0;
-                      while ( have_rows('abas') ) : the_row();?>
-                        <div role="tabpanel" class="tab-pane <?php echo ($i == 0) ? 'active' : null ?>" id="<?php echo $i ?>"><?php the_sub_field('conteudo_da_aba') ?></div>
+                      while ( have_rows('abas_galeria') ) : the_row();?>
+                      <pre>
+                        <?php print_r(get_field('conteudo_aba')) ?>
+                      </pre>
+
+                        <div role="tabpanel" class="tab-pane <?php echo ($i == 0) ? 'active' : null ?>" id="<?php echo $i ?>">
+
+                          <?php the_sub_field('conteudo_aba') ?>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <?php
+                                print_r($images);
+                                $images = get_field('conteudo_aba');
+
+                                if ($images): ?>
+                                  <?php foreach ($images as $image): ?>
+                                    <img src="<?php echo $image ['url']; ?>" alt="<?php echo $image ['alt']; ?>">
+                                    <?php echo $image ['caption']; ?>
+                                  <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div>
+                          </div>
+                        </div>
                           <?php $i++ ?>
                         <?php
                       endwhile;
