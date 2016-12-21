@@ -189,12 +189,13 @@ main {
 }
 
 .titulo-interno {
-  color: #150958;
+  color: #150958;  
 }
 
 .texto-interno {
   text-align: justify;
 }
+
 
 .img-institucional {
   margin-top: 5px;
@@ -209,6 +210,135 @@ main {
 .box-docente {
   min-height: 280px;
 }
+
+.box-curso-interno {
+  background: #f8f8f8;
+}
+
+.duracao-curso {
+  text-align: center;
+  color: #646464;
+}
+
+.previa-curso {
+  text-align: justify;
+  padding: 0 10px;
+  letter-spacing: 1.5px;
+}
+
+.investimento {
+  text-align: center;
+  font-weight: bold;
+  color: #646464;
+  margin-top: 15px;
+}
+
+.valor-matricula {
+  color: #150958;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+}
+
+.btn-saiba-curso {
+  background: #646464;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px !important;
+}
+
+.btn-matricule {
+  background: #7cdf95;
+  color: #fff;
+  border-radius: 0px !important;
+  text-align: center;
+  padding: 6px 39px !important;
+}
+
+.titulo-curso-saiba {
+  color: #150958;
+  text-transform: uppercase;
+}
+
+.btn-increva {
+  background: #7cdf95;
+  color: #fff;
+  border-radius: 0px !important;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.box-info-add {
+  border: 1px solid #858585;
+  background: #f7f7f7;
+}
+
+.titulo-info-add {
+  background: #150958;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.item-info {
+  padding: 20px;
+}
+
+label {
+  color: #150958;
+}
+
+.conteudo-curso {
+  margin-top: 30px;
+}
+
+.tab-content {
+  border: 1px solid #ddd !important;
+  padding: 10px;
+}
+
+.nav-tabs {
+  margin-left: 350px !important;
+  margin-right: 350px !important;
+}
+
+.nav-tabs > li > a {
+  background: #150958;
+  color: #fff;
+  margin-right: 0px;
+  line-height: 1.42857143;
+  border-radius: 0;
+  border: 1px solid transparent !important;
+}
+
+.nav-tabs > li > a:hover {
+  background: #3c2f85 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  margin-right: 0px;
+  line-height: 1.42857143;
+  border-radius: 0;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li > a:focus {
+  background: #3c2f85 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  margin-right: 0px;
+  line-height: 1.42857143;
+  border-radius: 0;
+}
+
+
+
+/*.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover .nav-tabs > li > a:hover, .nav-tabs > li > a:focus {
+
+}*/
 
 /***************************MENU*******************************/
 
