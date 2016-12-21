@@ -60,6 +60,7 @@ main {
   text-transform: uppercase;
   border-radius: 0px !important;
   border: 1px solid transparent;
+  margin-left: 14px;
 }
 
 .btn-area:hover {
@@ -107,8 +108,9 @@ main {
 
 .btn-section:hover {
   background: #fff;
-  color: #150958;
+  color: #150958 !important;
   border: 1px solid #150958;
+  transition-duration: 0.5s;
 }
 
 .curso-home {
@@ -189,7 +191,13 @@ main {
 }
 
 .titulo-interno {
-  color: #150958;  
+  color: #150958;
+}
+
+.titulo-curso-interno {
+  color: #150958;
+  text-align: center;
+  padding-top: 10px;
 }
 
 .texto-interno {

@@ -1,5 +1,5 @@
 <?php /*Template Name: Cursos*/ ?>
-<?php  get_header(); ?>
+<?php  get_header();?>
 <main>
   <div class="container">
     <?php
@@ -11,12 +11,13 @@
         		array(
         			'taxonomy' => 'categoria-curso',
         			'field' => 'slug',
-        			'terms' => 'graduacao'
+        			'terms' => get_current_slug()
         		)
         	)
         )
       );
      ?>
+
   <?php
     if ($wpcurso->have_posts() ): ?>
       <div class="row">
@@ -29,7 +30,7 @@
                 <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
               </a>
               <?php endif; ?>
-              <h3 class="titulo-interno"><?php echo get_the_title() ?></h3>
+              <h3 class="titulo-curso-interno"><?php echo get_the_title() ?></h3>
               <p class="duracao-curso"><?php echo get_field('duracao') ?></p>
               <div class="previa-curso">
                 <?php the_excerpt_limit(15)?>

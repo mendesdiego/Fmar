@@ -11,7 +11,9 @@
       <div class="row">
         <div class="col-sm-8">
           <h4 class="font-montserrat-bold margin-top-zero margin-bottom-30 ">Detalhamento</h4>
-          <p>Faça sua pré-inscrição, preenchendo o formulário abaixo! Você garantirá a matrícula no valor promocional (R$120,00). Contudo, este é o preço referente apenas à matrícula. As demais mensalidades serão emitidas no valor real estabelecido pela instituição. O valor do curso poderá ser ajustado de acordo com desconto* por pagamento em dia. *Consulte regulamento no colégio.</p>
+          <p>Faça sua pré-inscrição, preenchendo o formulário abaixo! Você garantirá a matrícula no valor promocional (R$120,00).
+            Contudo, este é o preço referente apenas à matrícula. As demais mensalidades serão emitidas no valor real estabelecido pela instituição.
+            O valor do curso poderá ser ajustado de acordo com desconto* por pagamento em dia. *Consulte regulamento no colégio.</p>
 
         </div>
         <div class="col-sm-4">
