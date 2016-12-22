@@ -19,7 +19,7 @@
               <div class="conteudo-curso">
 
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
+                <ul class="nav nav-tabs nav-tabs-instalacao" role="tablist">
                   <?php
                     // check if the repeater field has rows of data
                     if( have_rows('abas_galeria') ):
@@ -46,26 +46,19 @@
                       // loop through the rows of data
                       $i=0;
                       while ( have_rows('abas_galeria') ) : the_row();?>
-                      <pre>
-                        <?php print_r(get_field('conteudo_aba')) ?>
-                      </pre>
 
                         <div role="tabpanel" class="tab-pane <?php echo ($i == 0) ? 'active' : null ?>" id="<?php echo $i ?>">
-
-                          <?php the_sub_field('conteudo_aba') ?>
                           <div class="row">
-                            <div class="col-md-4">
-                              <?php
-                                print_r($images);
-                                $images = get_field('conteudo_aba');
-
-                                if ($images): ?>
-                                  <?php foreach ($images as $image): ?>
-                                    <img src="<?php echo $image ['url']; ?>" alt="<?php echo $image ['alt']; ?>">
-                                    <?php echo $image ['caption']; ?>
-                                  <?php endforeach; ?>
-                                <?php endif; ?>
+                            <?php
+                              $images = get_sub_field('conteudo_aba');
+                              if ($images): ?>
+                              <?php foreach ($images as $image): ?>
+                            <div class="col-md-3">
+                              <img src="<?php echo $image ['url']; ?>" alt="<?php echo $image ['alt']; ?>">
+                              <?php echo $image ['caption']; ?>
                             </div>
+                              <?php endforeach; ?>
+                            <?php endif; ?>
                           </div>
                         </div>
                           <?php $i++ ?>
