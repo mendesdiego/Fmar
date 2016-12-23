@@ -11,15 +11,15 @@
         <div class="row">
           <div class="col-md-6">
             <h2 class="titulo-section">Sobre<br> a Empresa</h2>
-            <p class="texto-sobre">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <?php query_posts('page_id=8' );
+  				  	if (have_posts()) : while (have_posts()) : the_post(); ?>
+  				  		<p class="texto-sobre"><?php the_excerpt_limit(60); ?></p>
+  				  <?php endwhile; endif; wp_reset_query(); ?>
           </div>
           <div class="col-md-6">
-            <img src="<?php echo get_template_directory_uri() ?>/images/img.jpg" alt="" class="img-responsive center-block">
+            <img src="<?php echo get_template_directory_uri() ?>/images/home-farmat.jpg" alt="" class="img-responsive center-block">
           </div>
-          <p align="center"><a class="btn btn-section" href="#" role="button">Conheça nossa faculdade</a></p>
+          <p align="center"><a class="btn btn-section" href="<?php echo esc_url(home_url('instituicao') ); ?>" role="button">Conheça nossa faculdade</a></p>
         </div>
       </div>
     </section>

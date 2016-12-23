@@ -20,16 +20,18 @@
         <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
           <a href="<?php echo esc_url( home_url( 'convenios' ) ); ?>" class="link-menu-footer">Convênios</a></li>
           <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
-            <a href="<?php echo esc_url( home_url( 'seja-professor' ) ); ?>" class="link-menu-footer">Seja Professor</a></li>  
+            <a href="<?php echo esc_url( home_url( 'seja-professor' ) ); ?>" class="link-menu-footer">Seja Professor</a></li>
       </ul>
     </div>
     <div class="col-md-4">
       <h3 class="titulo-footer">Menu</h3>
       <ul class="list-unstyled menu-footer">
-        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
-        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
-        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
-        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer"> <a href="#" class="link-menu-footer">Lorem ipsum dolor sit amet.</a></li>
+        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
+          <a href="<?php echo esc_url( home_url( 'trabalhe-conosco' ) ); ?>" class="link-menu-footer">Trabalhe Conosco</a></li>
+        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
+          <a href="<?php echo esc_url( home_url( 'ouvidoria' ) ); ?>" class="link-menu-footer">Ouvidoria</a></li>
+        <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
+          <a href="<?php echo esc_url( home_url( 'responsabilidade-social' ) ); ?>" class="link-menu-footer">Responsabilidade Social</a></li>        
       </ul>
     </div>
   </div>

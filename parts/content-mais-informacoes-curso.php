@@ -42,38 +42,33 @@
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                  <?php
-                    // check if the repeater field has rows of data
-                    if( have_rows('abas') ):
+                  <?php $i = 1 ?>
+                  <?php foreach(range(1,10) AS $number) { ?>
 
-                      // loop through the rows of data
-                      $i=0;
-                      while ( have_rows('abas') ) : the_row();?>
-                          <li role="presentation" class="<?php echo ($i == 0) ? 'active' : null ?>"><a href="#<?php echo $i ?>" aria-controls="<?php echo $i ?>" role="tab" data-toggle="tab">
-                            <?php the_sub_field('nome_aba') ?></a></li>
+                  <?php if(get_field('titulo_aba'.$number)) { ?>
+                    <li role="presentation" class="<?=($i == 1) ? 'active' : null; ?>">
+                      <a href="#<?php echo 'titulo_aba'.$number ?>" aria-controls="<?php echo get_field('titulo_aba'.$number) ?>" role="tab" data-toggle="tab">
+                        <?php echo get_field('titulo_aba'.$number) ?>
+                      </a>
+                    </li>
+                    <?php $i++ ?>
+                  <?php } ?>
 
-                          <?php $i++ ?>
-                        <?php
-                      endwhile;
-                    endif;
-                  ?>
+                  <?php } ?>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <?php
-                    // check if the repeater field has rows of data
-                    if( have_rows('abas') ):
-
-                      // loop through the rows of data
-                      $i=0;
-                      while ( have_rows('abas') ) : the_row();?>
-                        <div role="tabpanel" class="tab-pane <?php echo ($i == 0) ? 'active' : null ?>" id="<?php echo $i ?>"><?php the_sub_field('conteudo_da_aba') ?></div>
-                          <?php $i++ ?>
-                        <?php
-                      endwhile;
-                    endif;
-                  ?>
+                  <?php $i = 1 ?>
+                  <?php foreach(range(1,10) AS $number) { ?>
+                    <?php if(get_field('conteudo_aba'.$number)) { ?>
+                    <? $conteudo = get_field('conteudo_aba'.$number) ?>
+                    <div role="tabpanel" class="tab-pane <?=($i == 1) ? 'active' : null; ?> <?=(strlen($conteudo) > 300) ? 'duas-colunas-automaticamente' : null; ?>" id="<?php echo 'titulo_aba'.$number ?>">
+                      <? echo $conteudo?>
+                    </div>
+                    <?php } ?>
+                    <?php $i++ ?>
+                  <?php } ?>
                 </div>
               </div>
             </div>

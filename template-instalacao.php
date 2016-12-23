@@ -17,55 +17,41 @@
           <div class="row">
             <div class="col-md-12">
               <div class="conteudo-curso">
-
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-tabs-instalacao" role="tablist">
-                  <?php
-                    // check if the repeater field has rows of data
-                    if( have_rows('abas_galeria') ):
+                  <?php $i = 1 ?>
+                  <?php foreach(range(1,10) AS $number) { ?>
 
-                      // loop through the rows of data
-                      $i=0;
-                      while ( have_rows('abas_galeria') ) : the_row();?>
-                          <li role="presentation" class="<?php echo ($i == 0) ? 'active' : null ?>"><a href="#<?php echo $i ?>" aria-controls="<?php echo $i ?>" role="tab" data-toggle="tab">
-                            <?php the_sub_field('titulo_aba') ?></a></li>
+                  <?php if(get_field('titulo_aba'.$number)) { ?>
+                    <li role="presentation" class="<?=($i == 1) ? 'active' : null; ?>">
+                      <a href="#<?php echo 'titulo_aba'.$number ?>" aria-controls="<?php echo get_field('titulo_aba'.$number) ?>" role="tab" data-toggle="tab">
+                        <?php echo get_field('titulo_aba'.$number) ?>
+                      </a>
+                    </li>
+                    <?php $i++ ?>
+                  <?php } ?>
 
-                          <?php $i++ ?>
-                        <?php
-                      endwhile;
-                    endif;
-                  ?>
+                  <?php } ?>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <?php
-                    // check if the repeater field has rows of data
-                    if( have_rows('abas_galeria') ):
-
-                      // loop through the rows of data
-                      $i=0;
-                      while ( have_rows('abas_galeria') ) : the_row();?>
-
-                        <div role="tabpanel" class="tab-pane <?php echo ($i == 0) ? 'active' : null ?>" id="<?php echo $i ?>">
-                          <div class="row">
-                            <?php
-                              $images = get_sub_field('conteudo_aba');
-                              if ($images): ?>
-                              <?php foreach ($images as $image): ?>
-                            <div class="col-md-3">
-                              <img src="<?php echo $image ['url']; ?>" alt="<?php echo $image ['alt']; ?>">
-                              <?php echo $image ['caption']; ?>
-                            </div>
-                              <?php endforeach; ?>
-                            <?php endif; ?>
+                  <?php $i = 1 ?>
+                  <?php foreach(range(1,10) AS $number) { ?>
+                    <? $conteudo = get_field('conteudo_aba'.$number) ?>
+                    <?php if($conteudo) { ?>
+                      <div role="tabpanel" class="tab-pane <?=($i == 1) ? 'active' : null; ?>" id="<?php echo 'titulo_aba'.$number ?>">
+                        <div class="row">
+                        <?php foreach ($conteudo as $image) {?>
+                          <div class="col-md-3">
+                            <img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>" class="img-responsive">
                           </div>
+                        <?php } ?>
                         </div>
-                          <?php $i++ ?>
-                        <?php
-                      endwhile;
-                    endif;
-                  ?>
+                      </div>
+                    <?php } ?>
+                    <?php $i++ ?>
+                  <?php } ?>
                 </div>
               </div>
             </div>
