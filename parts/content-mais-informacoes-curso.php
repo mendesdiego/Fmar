@@ -12,7 +12,7 @@
               <div class="previa-curso">
                 <?php the_content(); ?>
               </div>
-              <a class="btn btn-increva" href="#" role="button">Inscreva-se agora mesmo</a>
+              <a class="btn btn-increva" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se agora mesmo</a>
             </div>
             <div class="col-md-6">
               <div class="box-info-add">
@@ -63,7 +63,7 @@
                   <?php foreach(range(1,10) AS $number) { ?>
                     <?php if(get_field('conteudo_aba'.$number)) { ?>
                     <? $conteudo = get_field('conteudo_aba'.$number) ?>
-                    <div role="tabpanel" class="tab-pane <?=($i == 1) ? 'active' : null; ?> <?=(strlen($conteudo) > 300) ? 'duas-colunas-automaticamente' : null; ?>" id="<?php echo 'titulo_aba'.$number ?>">
+                    <div role="tabpanel" class="tab-pane <?=($i == 1) ? 'active' : null; ?> " id="<?php echo 'titulo_aba'.$number ?>">
                       <? echo $conteudo?>
                     </div>
                     <?php } ?>

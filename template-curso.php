@@ -7,6 +7,7 @@
         'post_type' => 'cursos' ,
         'orderby'   => 'title',
         'order'     => 'ASC',
+        'posts_per_page' => 40,
         'tax_query' => array(
         		array(
         			'taxonomy' => 'categoria-curso',
@@ -21,6 +22,7 @@
   <?php
     if ($wpcurso->have_posts() ): ?>
       <div class="row">
+        <?php $i=1 ?>
         <?php while ($wpcurso->have_posts() ): ?>
           <?php $wpcurso-> the_post(); ?>
         <div class="col-md-3">
@@ -41,7 +43,14 @@
               <a class="btn btn-saiba-curso" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
           </div>
         </div>
+        <?php
+          if ($i % 4 == 0) {?>
+            <div class="clearfix"></div>
+          <?php }
+         ?>
+        <?php $i++ ?>
         <?php endwhile; ?>
+
         <?php wp_reset_query(); ?>
       </div>
     <?php endif; ?>

@@ -38,6 +38,7 @@ main {
 
 .item-contato-top {
   margin-right: 15px;
+  font-size: 24px;
 }
 
 .img-contato-top {
@@ -134,6 +135,7 @@ main {
 
 .box-curso {
   margin-top: 30px;
+  height: 400px;
 }
 
 .btn-curso-home {
@@ -222,6 +224,7 @@ main {
 
 .box-curso-interno {
   background: #f8f8f8;
+  margin-bottom: 30px;
 }
 
 .duracao-curso {
@@ -312,8 +315,8 @@ label {
 }
 
 .nav-tabs {
-  margin-left: 350px !important;
-  margin-right: 350px !important;
+  margin-left: 190px !important;
+  margin-right: 150px !important;
 }
 
 .nav-tabs > li > a {
@@ -373,63 +376,6 @@ label {
   background: #fff;
 }
 
-.titulo-post {
-  padding-left: 20px;
-  font-weight: bold;
-}
-
-.info-adicional {
-  padding-left: 25px;
-  padding-bottom: 20px;
-}
-
-.previa-post {
-  padding-left: 25px;
-  padding-right: 25px;
-  color: #777;
-}
-
-.btn-continue {
-  margin: 10px;
-  color: #fff;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.btn-continue:hover {
-  margin: 10px;
-  color: #0e55a4;
-  font-weight: 600;
-}
-
-.sociais-post {
-  font-size: 36px;
-  color: #E1E4E6;
-  padding-top: 8px
-}
-
-.sociais-post:hover {
-  font-size: 36px;
-  /*color: #fff;*/
-  padding-top: 8px;
-}
-
-/*.face-post:hover {
-  font-size: 36px;
-  color: #fff;
-  padding-right: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}*/
-
-/*.twitter-post:hover {
-  font-size: 36px;
-  color: #1da1f2;
-  padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}*/
-
 .saiba {
   border-top: 1px solid #b7b7b7;
   width: 100%;
@@ -447,6 +393,10 @@ label {
   margin-top: 20px;
   margin-left: 20px;
   color: #0e55a4;
+}
+
+.noticia-geral {
+  padding: 0 15px;
 }
 
 .pesquisa {
@@ -488,11 +438,6 @@ label {
   transition-duration: 1s;
 }
 
-/*.col-not {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}*/
-
 .bloco-noticia {
   border: #ccc solid 1px;
   margin-bottom: 20px;
@@ -513,7 +458,7 @@ label {
   color: #fff;
   text-transform: uppercase;
   border-radius: 0px !important;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 
 .btn-notica:hover {

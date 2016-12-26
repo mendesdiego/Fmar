@@ -14,18 +14,20 @@
                   </a>
                 <?php endif; ?>
               </div>
-              <h2 class="titulo-noticia"><?php the_title() ?></h2>
-              <div class="info-adicional">
-                <div class="pull-left info-block calendario">
-                  <i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j \d\e F \d\e Y') ?>
-                  <i class="fa fa-comment-o"></i> <?php comments_number('Nenhum comentário', '1 comentário', '% comentários'); ?>
-                </div>
-                <div class="pull-right info-categoria">
-                  <?php the_category('') ?>
-                </div>
-                <div class="clearfix"></div>
-                <div class="conteudo-noticia">
-                  <?php the_content() ?>
+              <div class="noticia-geral">
+                <h2 class="titulo-noticia"><?php the_title() ?></h2>
+                <div class="info-noticia">
+                  <div class="pull-left info-block calendario">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> <?php the_time('j \d\e F \d\e Y') ?>
+                    <i class="fa fa-comment-o"></i> <?php comments_number('Nenhum comentário', '1 comentário', '% comentários'); ?>
+                  </div>
+                  <div class="pull-right info-categoria">
+                    <?php the_category('') ?>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="conteudo-noticia">
+                    <?php the_content() ?>
+                  </div>
                 </div>
               </div>
             </article>

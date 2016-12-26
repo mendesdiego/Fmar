@@ -2,7 +2,7 @@
   <main>
     <div class="container">
       <div class="row">
-        <div class="col-md-8 col-not">
+        <div class="col-md-8">
           <?php
             if (have_posts()):
             while (have_posts()): the_post();
@@ -24,7 +24,7 @@
               <div class="saiba">
                 <a href="<?php the_permalink() ?>" class="btn btn-notica">Saiba Mais </a>
               </div>
-            </div>            
+            </div>
           </article>
           <?php
           endwhile;
