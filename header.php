@@ -48,7 +48,7 @@
             <div class="col-md-6">
               <div class="contato-top">
                 <ul class="list-unstyled list-inline">
-                  <li class="item-contato-top"><img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="" class="img-contato-top"> 3333-3333</li>
+                  <li class="item-contato-top"><img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="" class="img-contato-top"> 0800 037 4212</li>
                   <li><img src="<?php echo get_template_directory_uri() ?>/images/mail.png" alt="" class="img-contato-top">famart@famart.com.br</li>
                 </ul>
               </div>
@@ -56,10 +56,10 @@
             <div class="col-md-4">
               <div class="social-top">
                 <ul class="list-unstyled list-inline">
-                  <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/facebook.png" alt=""></a></li>
+                  <li><a href="https://www.facebook.com/faculdadefamart/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/facebook.png" alt=""></a></li>
                   <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/twitter.png" alt=""></a></li>
                   <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/instagram.png" alt="" class="icon-social"></a></li>
-                  <li><a class="btn btn-area" href="#" role="button"><i class="fa fa-lock cadeado-area" aria-hidden="true"></i> Área do Aluno</a></li>
+                  <li><a class="btn btn-area" href="http://ava.famart.edu.br/login/index.php" role="button" target="_blank"><i class="fa fa-lock cadeado-area" aria-hidden="true"></i> Área do Aluno</a></li>
                 </ul>
                 <?php get_template_directory_uri() ?>
               </div>

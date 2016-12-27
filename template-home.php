@@ -73,7 +73,7 @@
           	 <?php endif; ?>
              <?php wp_reset_query(); ?>
         </div>
-        <p align="center"><a class="btn btn-section" href="<php esc_url(home_url('/') ) ?>" role="button">Ver todos os cursos</a></p>
+        <p align="center"><a class="btn btn-section" href="<?php echo esc_url(home_url('todos-os-cursos') ) ?>" role="button">Ver todos os cursos</a></p>
       </div>
     </section>
 

@@ -38,7 +38,7 @@ main {
 
 .item-contato-top {
   margin-right: 15px;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .img-contato-top {
@@ -535,6 +535,29 @@ label {
   background: #150958 !important;
 }
 
+.alinha-link-footer {
+  margin-left: 25px;
+}
+
+.img-galeria {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btn-left {
+  float: left;
+}
+
+.btn-right {
+  float: right;
+}
+
+.titulo-galeria {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px
+}
+
 /***************************MENU*******************************/
 
 .navbar-brand {
@@ -556,6 +579,11 @@ label {
   background: #150958;
   color: #fff;
   transition-duration: 0.5s;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+  background: #150958 !important;
+  color: #fff !important;
 }
 
 /*************************************************************/
@@ -586,7 +614,7 @@ footer {
   color: #fff;
 }
 
-.link-menu-footer:hover {
+.link-menu-footer:hover, .link-menu-footer:active, .link-menu-footer:focus {
   color: #7cdf95;
   text-decoration: none;
 }
