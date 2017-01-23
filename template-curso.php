@@ -32,15 +32,22 @@
                 <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
               </a>
               <?php endif; ?>
-              <h3 class="titulo-curso-interno"><?php echo get_the_title() ?></h3>
-              <p class="duracao-curso"><?php echo get_field('duracao') ?></p>
-              <div class="previa-curso">
-                <?php the_excerpt_limit(15)?>
-              </div>
-              <p class="investimento">Investimento:
-                <span class="valor-matricula">R$ <?php echo get_field('valor_matricula') ?></span>
+              <h3 class="titulo-interno-curso"><?php echo get_the_title() ?></h3>
+              <p class="duracao-curso">
+                Duração:<br>
+                <?php echo get_field('duracao') ?>
               </p>
-              <a class="btn btn-saiba-curso" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
+              <!--<div class="previa-curso">
+                <?php the_excerpt_limit(18)?>
+              </div>-->
+
+              <div class="investimento">
+                <p>Investimento:</p>
+                <span class="valor-matricula">R$ <?php echo get_field('valor_matricula') ?></span>
+              </div>
+          </div>
+          <div class="botoes-curso">
+            <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
           </div>
         </div>
         <?php

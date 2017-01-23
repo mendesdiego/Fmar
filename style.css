@@ -31,9 +31,13 @@ main {
   color: #fff;
 }
 
+.matricule-top {
+  margin-bottom: 0px !important;
+}
+
 .contato-top {
   margin: 30px 0 0 60px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .item-contato-top {
@@ -62,6 +66,7 @@ main {
   border-radius: 0px !important;
   border: 1px solid transparent;
   margin-left: 14px;
+  margin-top: 5px;
 }
 
 .btn-area:hover {
@@ -125,7 +130,6 @@ main {
 }
 
 .desc-curso {
-  text-align: justify;
   font-size: 13px;
 }
 
@@ -135,7 +139,12 @@ main {
 
 .box-curso {
   margin-top: 30px;
-  height: 400px;
+  height: 430px;
+}
+
+.nome-categoria {
+  color: #505a78;
+  font-weight: bold;
 }
 
 .btn-curso-home {
@@ -201,6 +210,15 @@ main {
   color: #150958;
   text-align: center;
   padding-top: 10px;
+  font-size: 18px !important;
+}
+
+.titulo-interno-curso {
+  color: #150958;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 18px !important;
+  height: 60px;
 }
 
 .texto-interno {
@@ -224,7 +242,12 @@ main {
 
 .box-curso-interno {
   background: #f8f8f8;
+}
+
+.box-interno-curso {
   margin-bottom: 30px;
+  height: 450px;
+  background: #515151;
 }
 
 .duracao-curso {
@@ -233,16 +256,17 @@ main {
 }
 
 .previa-curso {
-  text-align: justify;
-  padding: 0 10px;
-  letter-spacing: 1.5px;
+  padding: 0 5px;
+  height: 120px;
 }
 
 .investimento {
   text-align: center;
   font-weight: bold;
   color: #646464;
-  margin-top: 15px;
+  margin-top: 10px;
+  margin-bottom: 0px !important;
+  padding-bottom: 15px;
 }
 
 .valor-matricula {
@@ -253,6 +277,11 @@ main {
   display: block;
 }
 
+
+.botoes-curso {
+  margin-bottom: 30px;
+}
+
 .btn-saiba-curso {
   background: #646464;
   color: #fff;
@@ -261,6 +290,21 @@ main {
 }
 
 .btn-matricule {
+  background: #7cdf95;
+  color: #fff;
+  border-radius: 0px !important;
+  text-align: center;
+  padding: 6px 39px !important;
+}
+
+.btn-curso-interno {
+  background: #646464;
+  color: #fff;
+  text-align: center;
+  border-radius: 0px !important;
+}
+
+.btn-matricule-interno {
   background: #7cdf95;
   color: #fff;
   border-radius: 0px !important;
@@ -544,6 +588,10 @@ label {
   cursor: pointer;
 }
 
+.previa-curso-interno {
+  padding: 0 5px;
+}
+
 .btn-left {
   float: left;
 }
@@ -558,10 +606,37 @@ label {
   margin-top: 20px
 }
 
+.btn-consultar-cep {
+  background: #150958;
+  color: #fff;
+  border-radius: 0px !important;
+}
+
+.btn-consultar-cep:hover {
+  color: #7cdf95 !important;
+}
+
+.table {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.table > thead > tr > th {
+  background: #150958;
+  color: #fff;
+  text-align: center;
+  border-bottom: none !important;
+}
+
+.subtitulo-modulo {
+  text-align: center;
+}
+
 /***************************MENU*******************************/
 
 .navbar-brand {
   height: auto !important;
+  margin-top: 25px
 }
 
 .navbar-nav {
@@ -572,6 +647,8 @@ label {
   color: #150958;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 12px;
+  padding: 10px !important;
 }
 
 .navbar-famart .navbar-nav > li > a:hover,
@@ -581,10 +658,23 @@ label {
   transition-duration: 0.5s;
 }
 
+.dropdown-menu {
+  padding: 0 0 !important;
+}
+
+.dropdown-menu > li > a {
+  font-size: 12px;
+}
+
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   background: #150958 !important;
   color: #fff !important;
 }
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
+  background: #150958 !important;
+}
+
 
 /*************************************************************/
 

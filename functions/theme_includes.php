@@ -15,6 +15,7 @@ if(!is_admin()){
 	wp_enqueue_script( 'jQuery', get_template_directory_uri() . '/js/jquery-3.1.1.js', array(), '1.12.1', false );
 	wp_enqueue_script( 'Bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array(), '3.3.5', true );
 	wp_enqueue_script( 'Galeria', get_template_directory_uri() . '/js/single-galeria.js', array(), '3.3.5', true );
+	wp_enqueue_script( 'Mask', get_template_directory_uri() . '/js/jquery.mask.min.js', array(), '1.5.9', true );
 	//wp_enqueue_script( 'slick', get_template_directory_uri() . '/js/slick.js', array(), '1.5.9', true );
 	//wp_enqueue_script( 'odometer', get_template_directory_uri() . '/js/odometer.js', array(), '1.5.9', true );
 	//wp_enqueue_script( 'WOW', get_template_directory_uri() . '/js/wow.js', array(),'1.1.2', true );

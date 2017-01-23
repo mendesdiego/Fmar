@@ -21,7 +21,7 @@
         <?php while ($wpcurso->have_posts() ): ?>
           <?php $wpcurso-> the_post(); ?>
         <div class="col-md-3">
-          <div class="box-curso-interno">
+          <div class="box-interno-curso">
             <?php if (has_post_thumbnail() ): ?>
               <a href="<?php echo get_permalink() ?>">
                 <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
@@ -30,14 +30,14 @@
               <h3 class="titulo-curso-interno"><?php echo get_the_title() ?></h3>
               <p class="duracao-curso"><?php echo get_field('duracao') ?></p>
               <div class="previa-curso">
-                <?php the_excerpt_limit(15)?>
+                <?php the_excerpt_limit(12)?>
               </div>
               <p class="investimento">Investimento:
                 <span class="valor-matricula">R$ <?php echo get_field('valor_matricula') ?></span>
               </p>
-              <div class="botoes-curso">
-                <a class="btn btn-saiba-curso" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
-              </div>
+          </div>
+          <div class="botoes-curso">
+            <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
           </div>
         </div>
         <?php

@@ -47,9 +47,10 @@
           <div class="row">
             <div class="col-md-6">
               <div class="contato-top">
+                <h4 class="matricule-top">Matricule-se</h4>
                 <ul class="list-unstyled list-inline">
                   <li class="item-contato-top"><img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="" class="img-contato-top"> 0800 037 4212</li>
-                  <li><img src="<?php echo get_template_directory_uri() ?>/images/mail.png" alt="" class="img-contato-top">famart@famart.com.br</li>
+                  <li><img src="<?php echo get_template_directory_uri() ?>/images/mail.png" alt="" class="img-contato-top">ouvidoria@famart.edu.br</li>
                 </ul>
               </div>
             </div>
@@ -58,7 +59,7 @@
                 <ul class="list-unstyled list-inline">
                   <li><a href="https://www.facebook.com/faculdadefamart/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/facebook.png" alt=""></a></li>
                   <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/twitter.png" alt=""></a></li>
-                  <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/instagram.png" alt="" class="icon-social"></a></li>
+                  <li><a href="https://www.instagram.com/famartfaculdademartins/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/instagram.png" alt="" class="icon-social"></a></li>
                   <li><a class="btn btn-area" href="http://ava.famart.edu.br/login/index.php" role="button" target="_blank"><i class="fa fa-lock cadeado-area" aria-hidden="true"></i> Área do Aluno</a></li>
                 </ul>
                 <?php get_template_directory_uri() ?>
@@ -93,7 +94,7 @@
                 wp_nav_menu($args);
                ?>
             </ul>
-            <a class="btn btn-agendado" href="#" role="button">Vestibulares Agendados</a>
+            <a class="btn btn-agendado" href="http://famart.edu.br/vestibular-2017/" target="_blank" role="button">Vestibulares Agendados</a>
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-->
       </nav>

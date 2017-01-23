@@ -13,7 +13,13 @@
             <h2 class="titulo-section">Sobre<br> a Empresa</h2>
             <?php query_posts('page_id=8' );
   				  	if (have_posts()) : while (have_posts()) : the_post(); ?>
-  				  		<p class="texto-sobre"><?php the_excerpt_limit(60); ?></p>
+  				  		<p class="texto-sobre">
+  				  		  A Faculdade FAMART, credenciada pela Portaria nº 186 de 05 de abril de 2016, faz parte do Grupo Andrade Martins,
+                  tendo seu limite territorial de atuação circunscrito ao município de Itaúna, no Estado de Minas Gerais, sendo
+                  um estabelecimento privado de ensino superior, particular em sentido estrito, mantido pela Faculdade e
+                  Instituto Martins Ltda, quando de fato iniciou sua atuação no ensino superior passando a ser credenciada a
+                  ofertar do curso de Licenciatura em Pedagogia.
+  				  		</p>
   				  <?php endwhile; endif; wp_reset_query(); ?>
           </div>
           <div class="col-md-6">
@@ -28,8 +34,7 @@
       <div class="container">
         <h2 class="titulo-section">Cursos<br> em destaque</h2>
         <p class="texto-sobre">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam
+          Conheça as diversas modalidades de cursos presenciais e a distância da Faculdade Famart e escolha a melhor opção para você.<br> Para saber mais, escolha o curso de seu interesse:
         </p>
 
         <div class="row">
@@ -62,8 +67,13 @@
                       </a>
                     <?php } ?>
                     <h3 class="titulo-curso"><?php the_title() ?></h3>
+                    <p class="nome-categoria"><?php
+                     $taxonomiasDoSingle = wp_get_post_terms( get_the_ID(), 'categoria-curso');
+                     echo $taxonomiasDoSingle [0]->name
+                    ?></p>
+
                     <p class="desc-curso">
-                      <?php the_excerpt_limit(15) ?>
+                      <?php the_excerpt_limit(9) ?>
                     </p>
                     <p align="center"><a class="btn btn-curso-home" href="<?php the_permalink() ?>" role="button">Saiba Mais</a></p>
                   </div>
@@ -81,8 +91,7 @@
       <div class="container">
         <h2 class="titulo-section">Últimas Notícias</h2>
         <p class="texto-sobre">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod<br> tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam
+          Acompanhe as últimas novidades e fique por dentro das notícias mais importantes da Faculdade Famart.
         </p>
 
         <div class="row">

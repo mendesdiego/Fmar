@@ -9,10 +9,16 @@
           <div class="row">
             <div class="col-md-6">
               <h3 class="titulo-curso-saiba"><?php the_title(); ?></h3>
-              <div class="previa-curso">
+              <div class="previa-curso-interno">
                 <?php the_content(); ?>
               </div>
               <a class="btn btn-increva" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se agora mesmo</a>
+              <?php
+              $edital = get_field('edital');
+               if ($edital) { ?>
+                <a class="btn btn-increva" href="<?php echo $edital; ?>" target="_blank" role="button">Baixe o edital</a>
+              <?php } ?>
+
             </div>
             <div class="col-md-6">
               <div class="box-info-add">
@@ -22,12 +28,20 @@
                   <p><?php echo get_field('duracao'); ?></p>
                   <hr>
 
-                  <label>Tipo de Formação</label>
+                  <label>Titulação</label>
                   <p><?php echo get_field('tipo_de_formacao'); ?></p>
                   <hr>
 
-                  <label>Tipo de Curso</label>
-                  <p><?php echo get_field('tipo_de_formacao'); ?></p>
+                  <label>Período</label>
+                  <p><?php echo get_field('periodo'); ?></p>
+                  <hr>
+
+                  <label>Modalidade</label>
+                  <p><?php echo get_field('modalidade'); ?></p>
+                  <hr>
+
+                  <label>Regime de Matrícula</label>
+                  <p><?php echo get_field('regime_de_matricula'); ?></p>
                   <hr>
 
                   <p><?php echo get_field('outras_informacoes'); ?></p>
