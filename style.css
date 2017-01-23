@@ -216,7 +216,7 @@ main {
 .titulo-interno-curso {
   color: #150958;
   text-align: center;
-  padding-top: 10px;
+  padding: 10px 10px;
   font-size: 18px !important;
   height: 60px;
 }
@@ -267,6 +267,15 @@ main {
   margin-top: 10px;
   margin-bottom: 0px !important;
   padding-bottom: 15px;
+}
+
+.valor_matricula_de {
+  color: #150958;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  text-decoration: line-through;
 }
 
 .valor-matricula {

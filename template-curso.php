@@ -43,7 +43,12 @@
 
               <div class="investimento">
                 <p>Investimento:</p>
-                <span class="valor-matricula">R$ <?php echo get_field('valor_matricula') ?></span>
+                <?php
+                  $valor_de = get_field('valor_de_matricula');
+                   if ($valor_de) { ?>
+                     <span class="valor_matricula_de">De: R$ <?php echo ($valor_de) ?></span>
+                <?php } ?>
+                <span class="valor-matricula">Por: R$ <?php echo get_field('valor_matricula') ?></span>
               </div>
           </div>
           <div class="botoes-curso">
