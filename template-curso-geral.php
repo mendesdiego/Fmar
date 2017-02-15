@@ -3,61 +3,75 @@
 <main>
   <div class="container">
     <?php
-      $wpcurso = new WP_Query ( array(
-        $paged = (get_query_var('paged') ) ? get_query_var('paged'): 1,
-        'post_type' => 'cursos' ,
-        'orderby'   => 'title',
-        'order'     => 'ASC',
-        'posts_per_page' => 8,
-        'paged' => $paged
-        )
-      );
-     ?>
+      $categoriasCurso = get_terms('categoria-curso', array(
+        'hide_empty' => false,
+        'parent' => 0,
+        'orderby' => 'name',
+        'order' => 'asc'
+      ) );
+    ?>
 
-  <?php
-    if ($wpcurso->have_posts() ): ?>
-      <div class="row">
-        <?php $i=1 ?>
-        <?php while ($wpcurso->have_posts() ): ?>
-          <?php $wpcurso-> the_post(); ?>
-        <div class="col-md-3">
-          <div class="box-interno-curso">
-            <?php if (has_post_thumbnail() ): ?>
-              <a href="<?php echo get_permalink() ?>">
-                <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
-              </a>
-              <?php endif; ?>
-              <h3 class="titulo-curso-interno"><?php echo get_the_title() ?></h3>
-              <p class="duracao-curso"><?php echo get_field('duracao') ?></p>
-              <div class="previa-curso">
-                <?php the_excerpt_limit(12)?>
-              </div>
-              <p class="investimento">Investimento:
-                <span class="valor-matricula">R$ <?php echo get_field('valor_matricula') ?></span>
-              </p>
-          </div>
-          <div class="botoes-curso">
-            <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
-          </div>
-        </div>
-        <?php
-          if ($i % 4 == 0) {?>
-            <div class="clearfix"></div>
-          <?php }
-         ?>
-        <?php $i++ ?>
-        <?php endwhile; ?>
-        <?php wp_reset_query(); ?>
-      </div>
-    <?php endif; ?>
-    <div class="row prev-next-posts">
-      <div class="next-posts-link col-sm-6 col-xs-6 text-left">
-        <?php echo get_previous_posts_link( 'Anterior' ); // display newer posts link ?>
-      </div>
-      <div class="prev-posts-link col-sm-6 col-xs-6 text-right">
-        <? echo get_next_posts_link( 'Próximo', $wpcurso->max_num_pages ); // display older posts link ?>
-      </div>
-    </div>
+    <? foreach($categoriasCurso AS $categoria) { ?>
+      <h1><?=$categoria->name?></h1>
+      <?php
+        $wpcurso = new WP_Query ( array(
+          'post_type' => 'cursos' ,
+          'orderby'   => 'title',
+          'order'     => 'ASC',
+          'posts_per_page' => -1,
+          'tax_query' => array(
+          		array(
+          			'taxonomy' => 'categoria-curso',
+          			'field' => 'slug',
+          			'terms' => $categoria->slug
+          		)
+          	)
+          )
+        );
+       ?>
+
+       <?php
+         if ($wpcurso->have_posts() ): ?>
+           <div class="row">
+             <?php $i=1 ?>
+             <?php while ($wpcurso->have_posts() ): ?>
+               <?php $wpcurso-> the_post(); ?>
+             <div class="col-md-3">
+               <div class="box-curso-interno">
+                 <?php if (has_post_thumbnail() ): ?>
+                   <a href="<?php echo get_permalink() ?>">
+                     <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array('class' => 'img-responsive')) ?>
+                   </a>
+                   <?php endif; ?>
+                   <h3 class="titulo-interno-curso"><?php echo get_the_title() ?></h3>
+                   <p class="duracao-curso"><?php echo get_field('duracao') ?></p>
+                   <p class="investimento">Matrícula:
+                     <?php
+                       $valor_de = get_field('valor_matricula');
+                       $valor_por = get_field('valor_matricula_promocional');
+                        if ($valor_por) { ?>
+                          <span class="valor_matricula_de">De: R$ <?php echo $valor_de ?></span>
+                          <span class="valor-matricula">Por: R$ <?php echo $valor_por ?></span>
+                     <?php } else { ?>
+                       <span class="valor-matricula">R$ <?php echo $valor_de ?></span>
+                     <?php } ?>
+                   </p>
+               </div>
+               <div class="botoes-curso">
+                 <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
+               </div>
+             </div>
+             <?php
+               if ($i % 4 == 0) {?>
+                 <div class="clearfix"></div>
+               <?php }
+              ?>
+             <?php $i++ ?>
+             <?php endwhile; ?>
+             <?php wp_reset_query(); ?>
+           </div>
+         <?php endif; ?>
+      <? } ?>
   </div>
 </main>
 <?php get_footer() ?>

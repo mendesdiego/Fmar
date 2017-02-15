@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--Title-->
+	<title>Flickerplate Example</title>
+	
+	<!--Basic page styles-->
+	<style>
+		html {
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			background-color: #fff;
+			font-weight: 300;
+		}
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+		.documentation {
+			width: 1100px;
+			margin: 0px auto;
+			padding: 100px 0px;
+		}
+		.documentation h3, p {
+			text-align: center;
+		}
+		.documentation h3 {
+			margin: 0px 0px 20px 0px;
+			font-weight: 300;
+			font-size: 2em;
+		}
+		.but {
+			float: right;
+			background-color: #000;
+			color: #FFF;
+			margin-top:145px;
+			margin-right:-30px;
+			padding: 5px 20px;
+			text-decoration: none;
+			box-sizing: border-box;
+			font-family: Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			border-bottom: 3px #F4971C solid;
+		}
+
+
+	</style>
+	
+	<!--Required libraries-->
+	<script src="js/min/jquery-v1.10.2.min.js" type="text/javascript"></script>
+	<script src="js/min/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+	<script src="js/min/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+
+	<!--Include flickerplate-->
+	<link href="css/flickerplate.css"  type="text/css" rel="stylesheet">
+	<script src="js/min/flickerplate.min.js" type="text/javascript"></script>
+	
+	<!--Execute flickerplate-->
+	<script>
+		$(document).ready(function(){
+
+			$('.flicker-example').flicker();
+		});
+	</script>
+
+</head>
+<body>
+	
+	<!--Basic example-->
+	<div class="flicker-example" data-block-text="false">
+		
+		<ul>
+			<!--<li>
+				<a href="http://famart.edu.br/vestibular-2017">
+					<img src="img/famart_123.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>-->
+
+			<li>.
+				<a href="img/RESULTADO-VESTIBULARFAMART-1.pdf" target="_blank">
+					<img src="img/resultado_famart.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>
+			<li>
+				<a href="img/FAMArtGABARITO.pdf" target="_blank">
+					<img src="img/banerfamart.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>
+			
+
+			<li>.
+				<a href="https://goo.gl/7TGjbf" target="_blank">
+					<img src="img/famart_prouni.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>
+
+			<li>.
+				<a href="http://sisfiesportal.mec.gov.br/" target="_blank">
+					<img src="img/famart_fies.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>
+
+
+
+			
+			<!--<li>
+				<a href="">
+					<img src="img/famart_final.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>-->
+			<li>
+				<a href="famart-nota-5-no-mec.php">
+					<img src="img/famart-nota-5.png" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+				</a>
+			</li>
+			
+
+			<li>
+				<img src="img/banner_famart2.jpg" style="margin-left: -47px; margin-top: -99px; position: absolute;">
+			</li>
+			
+
+			<!-- 
+			<li data-background="img/banner_famart1.jpg">
+				 <!--<div class="flick-title">Flickerplate Is Working</div>
+				 <div class="flick-sub-text">Heaven forbid this package you downloaded is broken. That wouldn't be embarrassing at all.</div> -->
+			<!-- </li>
+			
+			<li data-background="img/banner_famart2.jpg">
+				<div class="flick-title">Editable via Javascript or CSS</div>
+				<div class="flick-sub-text">Take a look at the extensive documentation to see how you can change the settings in multiple ways.</div>
+			</li>
+			
+			<!--<li data-background="img/b4.jpg">
+				 <div class="flick-title">Touch Enabled Through the jQuery Finger Library</div>
+				<div class="flick-sub-text">jQuery Finger is a great touch library that has been included as part of the Flickerplate package.</div>
+			</li> -->
+		</ul>
+
+	</div>
+
+
+
+
+</body>
+</html>

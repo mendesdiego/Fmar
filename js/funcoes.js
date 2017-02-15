@@ -24,8 +24,8 @@ jQuery(document).ready(function(){
   });
 });
 
-$("#curso-nome").val($("#hidden-nome-do-curso").val());
- $("#curso-modalidade").val($("#hidden-modalidade-curso").val());
+$("#nome-curso").val($("#hidden-nome-do-curso").val());
+ $("#modalidade-curso").val($("#hidden-modalidade-curso").val());
 
 
 jQuery(document).ready(function(){
@@ -61,6 +61,7 @@ jQuery(document).ready(function(){
         formato:'json'
       },
       success: function(res){
+				console.log(res);
 
         if(res.logradouro.length > 0) {
           $("#endereco-logradouro").val(res.tipo_logradouro + ' ' + res.logradouro) ;
@@ -74,6 +75,10 @@ jQuery(document).ready(function(){
         if(res.uf.length > 0) {
           $("#endereco-estado").val(res.uf) ;
         }
+
+				if(res.resultado_txt == 'sucesso - cep não encontrado') {
+					$( ".cep" ).append( "<span>Cep não encontrado!</span>" );
+				}
 
       }
     });
@@ -91,17 +96,22 @@ jQuery(document).ready(function(){
 
   //
   $('.wrap-content-form-pre-matricula form').submit(function(event) {
-    event.preventDefault(); //this will prevent the default submit
+    //event.preventDefault(); //this will prevent the default submit
+		console.log('deuy submit') ;
 
-    var telefoneCelular = $("#identificacao-telefone-celular").val();
-    var arrTelefoneCelular = telefoneCelular.split(" ") ;
-    var dddOnlyNumbers = arrTelefoneCelular[0].replace(/[^0-9\\.]+/g, '');
-    var celularOnlyNumbers = arrTelefoneCelular[1].replace(/[^0-9\\.]+/g, '');
+		var telefoneCelular = $("#telefone-celular").val();
+	     if(telefoneCelular.length > 0) {
+	       var arrTelefoneCelular = telefoneCelular.split(" ") ;
+				 console.log(arrTelefoneCelular) ;
+	       var dddOnlyNumbers = arrTelefoneCelular[0].replace(/[^0-9\\.]+/g, '');
+	       var celularOnlyNumbers = arrTelefoneCelular[1].replace(/[^0-9\\.]+/g, '');
+	       $('#pagseguro-cliente-ddd').val(dddOnlyNumbers);
+	       $('#pagseguro-cliente-telefone').val(celularOnlyNumbers);
+	     }
 
-    $('#pagseguro-cliente-nome').val($('#identificacao-nome-completo').val());
-    $('#pagseguro-cliente-ddd').val(dddOnlyNumbers);
-    $('#pagseguro-cliente-telefone').val(celularOnlyNumbers);
-    $('#pagseguro-cliente-email').val($('#identificacao-email').val());
+	     $('#pagseguro-cliente-nome').val($('#identificacao-nome-completo').val());
+	     $('#pagseguro-cliente-email').val($('#identificacao-email').val());
+
 
   })
 
@@ -111,7 +121,7 @@ jQuery(document).ready(function(){
     $("#curso-modalidade").val($("#hidden-modalidade-curso").val());
   })
 
-	// adiciona table resposnive às tableas do content da table
+	// adiciona table resposnive às tabelas do content da table
   $(".main-page-curso-mais-informacoes .panel-body table" ).addClass('table-responsive') ;
 
   // pode ser usada em outras áreas do site, basta colocar a classe .carregar-estados-do-brasil
@@ -133,3 +143,41 @@ jQuery(document).ready(function(){
       }
     });
   }
+
+
+	jQuery(document).ready(function(){
+
+		function setBackgroundInCol() {
+			if(window.innerWidth >= 768 ) {
+				// aplicar background
+				var box = $('.main-page-curso-form-pre-matricula .box-img') ;
+				console.log(box) ;
+				var bg = box.attr("data-background-img");
+				console.log('bg: ' + bg) ;
+				box.css("background-image", 'url("' + bg + '")');
+			} else {
+				// remover background
+				console.log('remover background')
+					var box = $('.main-page-curso-form-pre-matricula .box-img') ;
+				box.css("background-image", 'none');
+			}
+		}
+		setBackgroundInCol() ;
+		window.addEventListener("resize", function () {
+			setBackgroundInCol() ;
+		}, false);
+
+		// aparece editar ao invés de regulamento no curso de pedagogia
+		function trocarModalRegulamentoPorLinkDoEdital(idCurso, linkDoEdital) {
+			if(idCurso.val() == 158) {
+				var linkRegulamento = $('#link-modal-regulamento') ;
+				linkRegulamento.attr("data-toggle", '') ;
+				linkRegulamento.attr("data-target", '') ;
+				linkRegulamento.attr("target", '_blank') ;
+				linkRegulamento.attr("href", linkDoEdital.val()) ;
+				linkRegulamento.text('edital') ;
+			}
+		}
+
+		trocarModalRegulamentoPorLinkDoEdital($('#hidden-id-curso'), $('#hidden-link-do-edital')) ;
+	});

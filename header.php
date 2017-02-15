@@ -50,7 +50,7 @@
                 <h4 class="matricule-top">Matricule-se</h4>
                 <ul class="list-unstyled list-inline">
                   <li class="item-contato-top"><img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="" class="img-contato-top"> 0800 037 4212</li>
-                  <li><img src="<?php echo get_template_directory_uri() ?>/images/mail.png" alt="" class="img-contato-top">ouvidoria@famart.edu.br</li>
+                  <li><img src="<?php echo get_template_directory_uri() ?>/images/mail.png" alt="" class="img-contato-top">atendimento@famart.edu.br</li>
                 </ul>
               </div>
             </div>

@@ -48,7 +48,7 @@
                 'post_type' => 'cursos',
                 'order' => 'asc',
                 'posts_per_page' => '6',
-                'meta_key' =>  'destaque_home',
+                'meta_key' =>  'destacar_home',
                 'meta_value'  => 1
               );
 
@@ -72,10 +72,10 @@
                      echo $taxonomiasDoSingle [0]->name
                     ?></p>
 
-                    <p class="desc-curso">
+                    <!--<p class="desc-curso">
                       <?php the_excerpt_limit(9) ?>
-                    </p>
-                    <p align="center"><a class="btn btn-curso-home" href="<?php the_permalink() ?>" role="button">Saiba Mais</a></p>
+                    </p>-->
+                    <p align="center"><a class="btn btn-curso-home btn-block" href="<?php the_permalink() ?>" role="button">Saiba Mais</a></p>
                   </div>
             	  </div>
                 <?php endwhile; ?>

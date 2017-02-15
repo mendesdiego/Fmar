@@ -1,0 +1,181 @@
+
+<link rel = "stylesheet" href = "css/style.css">
+<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
+<!-- ###################################################### -->
+<div id = "logo" class = "containner100">
+
+    <div id = "logoimg">
+        <img id = "link-topo" src = "img/logo.png" width = "300" alt = "" onClick = "location.href='/'">
+    </div>
+
+    <div id = "login">
+        <h1 id = "telefone"><img src = "img/telefone_famart.png" height = "45" width = "226" alt = ""></h1>
+
+        <form id = "Acesso" name = "form" method = "post" action = "#">
+            <input type = "text" name = "username" placeholder = "Usuário" style="height: 28px;">
+            <input type = "password" name = "password" placeholder = "Senha" style="height: 28px;">
+            <input class="botao-acessar" type = "submit" value = "Acessar">
+
+        </form>
+
+
+    </div>
+
+
+</div>
+<!-- ###################################################### -->
+<div id = "menu" class = "containner100">
+    <div class = "box840  centraliza">
+        <ul>
+            <li class = "rt">
+                INSTITUCIONAL
+                <ul>
+                    <div id = "div1-menu">
+                        <li><a href = "institucional.php">Dados Institucionais</a></li>
+                        <li><a href = "breve-historico-institucional.php">Breve Histórico Institucional</a></li>
+                        <li><a href = "instalacoes.php">Instalações</a></li>
+                        <li><a href = "organograma.php">Organograma</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li class = "rt">
+                PERIÓDICOS
+                <ul>
+                    <div id = "div1-menu">
+                        <li>
+                            <a href = "http://www.periodicos.capes.gov.br/" target = "_blank">Capes</a>
+                        </li>
+
+                        <li>
+                            <a href = "http://www.rbep.inep.gov.br/index.php/emaberto/index" target = "_blank"> Em Aberto</a>
+                        </li>
+
+                        <li>
+                            <a href = "http://www.rle.ucpel.tche.br/index.php/rle/index" target = "_blank">Linguagem & Ensino</a>
+                        </li>
+
+                        <li>
+                           <a href = "http://www.sbecotur.org.br/revbea/index.php/revbea" target = "_blank">Revista Brasileira de Educação Ambiental</a>
+                         </li>
+
+                        <li>
+                         <a href = "http://revistas.ulusofona.pt/index.php/rleducacao" target = "_blank">Revista Lusófona de Educação</a>
+                         </li>
+
+                         <li>
+                             <a href = "http://www.rbep.inep.gov.br/index.php/RBEP" target = "_blank">Revista Brasileira de Estudos Pedagógicos</a>
+                         </li>
+
+                         <li>
+                             <a href = "http://cascavel.ufsm.br/revistas/ojs-2.2.2/index.php/educacaoespecial"
+                             target = "_blank">Revista Educação Especial</a>
+                         </li>
+
+                         <li>
+                             <a href = "http://books.scielo.org/?lang=pt" target = "_blank">Scielo</a>
+                         </li>
+
+                         <li>
+                             <a href = "http://revistaseletronicas.pucrs.br/ojs/index.php/faced" target = "_blank">Educação</a>
+                         </li>
+                 </div>
+             </ul>
+         </li>
+         <li class = "rt">
+            GRADUAÇÃO
+            <ul>
+                <div id = "div1-menu">
+                    <li>
+                        <a href = "informacoes.php?IdCurso=1">Pedagogia</a>
+                            <!-- <ul>
+                                <li><a href = "/sobreocurso.php?IdCurso=1">Sobre o Curso</a></li>
+                                <li><a href = "/sobreocurso.php?IdCurso=1">Coordenação</a></li>
+                                <li><a href = "/sobreocurso.php?IdCurso=1">Matriz Curricular</a></li>
+                                <li><a href = "/sobreocurso.php?IdCurso=1">Corpo Docente</a></li>
+                            </ul>
+                        -->
+                    </li>
+                </div>
+            </ul>
+        </li>
+        <li class = "rt"><a href = "cursos-livres.php">CURSOS LIVRES</a></li>
+        <li class = "rt">
+        <a href = "cursos-de-extensao.php">
+        CURSOS DE EXTENSÃO
+        </a>
+            <ul>
+                <div id = "div1-menu">
+                    <li>
+                        <a href = "cursos-de-extensao-educacao.php">EDUCAÇÃO</a>
+                    </li>
+                    <li>
+                        <a href = "cursos-de-extensao-gestao.php">GESTÃO</a>
+                    </li>
+                    <li>
+                        <a href = "cursos-de-extensao-comunicacao.php">COMUNICAÇÃO</a>
+                    </li>
+                    <li>
+                        <a href = "cursos-de-extensao-saude.php">SAÚDE</a>
+                    </li>
+                </div>
+            </ul>
+        </li>
+        <li class = "rt"><a href = "trabalheconosco.php">TRABALHE CONOSCO</a></li>
+        <li class = "rt"><a href = "ouvidoria.php">OUVIDORIA</a></li>
+            <!--
+               <li><a href="grade-todos-cursos.php">CURSOS</a>
+                   <ul>
+                      <div id="div1-menu" >
+                          <li><a href="/informacoes.php?id=">1</a></li>
+                          <li><a href="/informacoes.php?id=">1</a></li>
+                          <li><a href="/informacoes.php?id=">1</a></li>
+                          <li><a href="/informacoes.php?id=">1</a></li>
+                      </div>
+                    </ul>
+                  </li>
+              -->
+          </ul>
+      </div>
+  </div>
+  <script src = "//code.jquery.com/jquery-1.10.2.js"></script>
+  <script type = "text/javascript">
+    $(document).ready(function () {
+
+
+        // =================menu abaixo do======================
+        $('#menu').find('> div > ul> li').hover(function () {
+
+            $(this).find('ul').css({"display": "block"});
+        });
+        $('#menu').find('> div > ul> li').mouseleave(function () {
+
+            $(this).find('ul').css({"display": "none"});
+        });
+
+
+        // =======================================================
+    });
+</script>
+
+
+<!-- ESSE SCRIPT FAZ O EFEITO DOS 4 BOX ABAIXO DO BANNER -->
+<script>
+    $(document).ready(function () {
+        $("#tale").find("article .textocursos").hover(
+            function () {
+                $(this).stop();
+                $(this).css("padding-top", "60px");
+                $(this).animate({"padding-top": "-=60px"}, 200);
+            },
+            function () {
+                $(this).animate(
+                    {"padding-top": "+=60px"},
+                    200,
+                    function () {
+                        $(this).stop();
+                        $(this).css("padding-top", "60px");
+                    }
+                    );
+            });
+    });
+</script>

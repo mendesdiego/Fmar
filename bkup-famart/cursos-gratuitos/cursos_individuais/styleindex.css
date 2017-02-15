@@ -1,0 +1,39 @@
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+	/*background-color: #fff;*/
+	/*color: #fff;*/
+	text-decoration: underline;
+}
+
+.apreto {
+	color: #000;
+	text-decoration: none;
+}
+
+.alaranja {
+	color: #FF6600;
+	text-decoration: none;
+}
+
+.vermelho {
+	color: #CC3333;
+	text-decoration: none;
+}
+
+.field {
+
+	color: #666;
+	font: verdana;
+	font-size: 12px;
+	background-color: #f9f9f9;
+	border:1px solid #999;
+
+}
+
+.img {
+ 	border: 1px solid #eee;
+}

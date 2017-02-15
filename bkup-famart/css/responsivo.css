@@ -1,0 +1,260 @@
+<style type="text/css">
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1600px) {
+
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+}
+
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 959px) and (max-width: 768px) {
+  .img-modal {
+    width: 300px;
+    margin-left: 23%;
+    margisn-top: 20%;
+  }
+
+  .close{
+    margin-bottom: -130px!important;
+    margin-right: 161px;
+  }
+
+  .window{
+    top: 20%!important
+  }
+
+  #box950
+  {
+    width: 83%!important;
+  }
+
+  #encontreCurso{
+    margin: 11px -6px;
+  }
+
+  .bloco {
+    margin: 4px!important;
+  }
+
+  #rodape{
+    margin-top: 90%!important;
+  }
+
+  .btn-facebook{
+    font-size: 1.4em!important;
+  }
+
+  #noticias > h1 {
+    font-size: 20px!important;
+    padding-left: 0!important;
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  .img-modal {
+    width: 300px;
+    margin-left: 23%;
+    margin-top: 20%;
+  }
+
+  .close{
+    margin-bottom: -130px!important;
+    margin-right: 161px;
+  }
+
+  .window{
+    top: 20%!important
+  }
+
+  #box950
+  {
+    width: 83%!important;
+  }
+
+  #encontreCurso{
+    margin: 11px -6px;
+  }
+
+  .bloco {
+    margin: 4px!important;
+  }
+
+  #rodape{
+    margin-top: 90%!important;
+  }
+
+  .btn-facebook{
+    font-size: 1.4em!important;
+  }
+
+  #noticias > h1 {
+    font-size: 20px!important;
+    padding-left: 0!important;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .img-modal {
+    width: 300px;
+    margin-left: 23%;
+    margin-top: 20%;
+  }
+
+  .close{
+    margin-bottom: -130px!important;
+    margin-right: 161px;
+  }
+
+  .window{
+    top: 20%!important
+  }
+
+  #box950
+  {
+    width: 83%!important!important;
+  }
+
+  #encontreCurso{
+    margin: 11px -6px;
+  }
+
+  .bloco {
+    margin: 4px!important;
+  }
+
+  #rodape{
+    margin-top: 90%!important;
+  }
+
+  .btn-facebook{
+    font-size: 1.4em!important;
+  }
+
+  #noticias > h1 {
+    font-size: 20px!important;
+    padding-left: 0!important;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  .img-modal {
+    width: 310px;
+    margin-left: 23%;
+    margin-top: 20%;
+  }
+
+  .close{
+    margin-bottom: -130px!important;
+    margin-right: 151px;
+  }
+
+  .window{
+    top: 20%!important
+  }
+
+  #box950
+  {
+    width: 83%!important;
+  }
+
+  #encontreCurso{
+    margin: 11px -6px;
+  }
+
+  .bloco {
+    margin: 4px!important;
+  }
+
+  #rodape{
+    margin-top: 90%!important;
+  }
+
+  .btn-facebook{
+    font-size: 1.4em!important;
+  }
+
+  #noticias > h1 {
+    font-size: 20px!important;
+    padding-left: 0!important;
+  }
+}
+
+
+
+@media only screen and (min-width: 411px) and (max-width: 731px) {
+  #dentro-conteudo {
+    margin: -1%!important;
+    margin-top: 6%!important;
+  }
+
+  .btn-facebook{
+    font-size: 1.4em!important;
+  }
+
+  #box950
+  {
+    width: 83%!important;
+    margin: 0 auto 25px 34px!important;
+  }
+
+  #noticias > h1 {
+    font-size: 20px!important;
+    padding-left: 0!important;
+  }
+}
+
+
+@media only screen and (max-width: 320px) {
+  .img-modal {
+    width: 300px;
+    margin-left: 23%;
+    margin-top: 20%;
+  }
+
+  .close{
+    margin-bottom: -130px!important;
+    margin-right: 161px;
+  }
+
+  .window{
+    top: 20%!important
+  }
+
+  #box950
+  {
+    width: 83%!important;
+    margin: 0 auto 25px -7px!important;
+  }
+
+  #encontreCurso{
+    margin: 11px -6px;
+  }
+
+  .bloco {
+    margin: 4px!important;
+  }
+
+  #rodape{
+    margin-top: 90%!important;
+  }
+
+
+  .btn-facebook{
+    font-size: 1.4em!important;
+  }
+
+  #noticias > h1 {
+    font-size: 20px!important;
+    padding-left: 0!important;
+  }
+}
+
+</style>

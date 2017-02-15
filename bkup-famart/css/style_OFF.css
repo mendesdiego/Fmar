@@ -1,0 +1,1009 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 12px;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-width: 400px;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+#menu > div > ul > li {
+    color: white;
+    cursor: pointer;
+}
+
+#logoimg {
+    float: left;
+}
+
+#login {
+    margin: 9px 11px;
+    float: right;
+    width: 440px;
+    padding: 10px;
+}
+
+#telefone {
+    font-size: 20px;
+    color: rgb(23, 11, 90);
+    text-align: right;
+}
+
+#login > form > input[type="password"], #login > form > input[type="text"] {
+    width: 162px;
+}
+
+input[type="text"], input[type="password"] {
+    border: 1px solid rgba(37, 37, 35, 0.13);
+    padding: 2px;
+    height: 30px;
+}
+
+input[type="submit"] {
+    float: right;
+    background: rgb(93, 150, 202);
+    padding: 8px;
+    color: white;
+    height: 36px;
+    width: 84px;
+}
+
+#menu {
+    clear: both;
+}
+
+#menu > div > ul > li > ul {
+    display: none;
+    position: absolute;
+    z-index: 419999991;
+    box-shadow: 4px 0px 38px -15px black;
+    width: 250px;
+    background: white;
+    padding: 8px;
+    z-index: 419999991;
+    font-size: 12px;
+
+}
+
+#div1-menu > li > a {
+    float: left;
+    width: 94%;
+    padding: 5px;
+    z-index: 419999991;
+    border-bottom: 1px dotted black!important;
+}
+
+#menu > div > ul > li > ul > div > li > a:hover {
+    color: orange;
+    background: #1B265A z-index:419999991;
+}
+
+#div1-menu > li > a:hover > ul {
+    display: block;
+    width: 100px;
+    height: 200px;
+    position: absolute;
+}
+
+#menu > div > ul > li > ul > #div1-menu > li > ul > li > a:hover {
+    color: orange !important;
+}
+
+#menu > div > ul > li > ul > #div1-menu > li > ul > li {
+    background: none;
+    font-size: 12px;
+}
+
+#menu > div > ul > li > ul > #div1-menu > li > ul {
+    width: 100px;
+    height: 200px;
+    display: none !important;
+    position: absolute;
+}
+
+#menu > div > ul > li > ul > #div1-menu > li:hover > ul {
+    display: block !important;
+    background: rgb(232, 227, 227);
+    width: 220px;
+    height: 200px;
+    left: 200px;
+    top: 0px;
+    list-style: none;
+}
+
+.cor_box_cinza {
+    background: #666;
+}
+
+.titulo {
+    color: #140958;
+    background-image: url("../img/seta-titulo.png");
+    background-repeat: no-repeat;
+    padding: 0 0 0 0;
+    position: relative;
+}
+
+.texto p {
+    padding: 18px;
+    text-align: left;
+    width: 90%;
+    color: #999;
+}
+
+.leiamais p {
+    text-align: left;
+    color: #CBB77A;
+    width: 95px;
+    float: right;
+    font-weight: bold;
+}
+
+#containner {
+}
+
+#logo {
+    padding: 20px 0;
+    width: 918px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+#banner {
+    width: 926px;
+    margin: 10px auto 0 auto;
+}
+
+#menu {
+    background-color: #33506D;
+}
+
+#menu > div > ul > li > a {
+    color: white;
+}
+
+#menu ul > li {
+    line-height: 30px;
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 80%;
+    padding-left: 20px;
+}
+
+#menu ul > li {
+    line-height: 30px;
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+#barra-acima-rodape {
+    background-color: #c4c3c1;
+    color: #140958;
+}
+
+#containner > div > div > div > div > ul > li > a {
+    color: #140958;
+}
+
+#barra-acima-rodape ul > li {
+    line-height: 30px;
+    display: inline-block;
+    list-style: none;
+    margin-right: 20px;
+    font-size: 12px;
+    padding-left: 20px;
+    background: url("../img/seta-rodape.png") no-repeat left center;
+}
+
+#encontreCurso {
+    text-align: center;
+    width: 100%;
+    background: rgb(174, 206, 235);
+    font-size: 12px;
+}
+
+#pesquisa {
+    width: 100%;
+    height: 75px;
+    font-size: 12px;
+    clear: both;
+    margin: 7px 0;
+    text-align: center;
+    background: rgb(174, 206, 235);
+}
+
+#pesquisa > h2 {
+    padding: 5px;
+    font-size: 12px;
+}
+
+#bloco1 {
+    color: white;
+    width: 22%;
+    float: left;
+    min-height: 150px;
+    margin: 10px;
+    position: relative;
+    background: #232E8D;
+}
+
+#bloco2 {
+    color: white;
+    width: 23%;
+    float: left;
+    min-height: 150px;
+    margin: 10px;
+    position: relative;
+    background: #232E8D;
+}
+
+#bloco3 {
+    color: white;
+    width: 23%;
+    float: left;
+    min-height: 150px;
+    margin: 10px;
+    position: relative;
+    background: #232E8D;
+}
+
+#bloco4 {
+    color: white;
+    width: 23.5%;
+    float: left;
+    min-height: 150px;
+    margin: 10px;
+    position: relative;
+    background: #232E8D;
+}
+
+#tale {
+    width: 100%;
+}
+
+#tale .last_article {
+    margin-right: 0;
+}
+
+#tale article {
+    padding-left: 8px;
+    text-align: left;
+    overflow: hidden;
+    width: 215px;
+    height: 134px;
+    margin-left: 10px;
+    float: left;
+    color: #fff;
+    vertical-align: bottom;
+    font-weight: normal;
+}
+
+#tale article .titulocategoria {
+    height: 29px;
+    padding: 0;
+    margin: 0 0 18px 0;
+    font-family: 'Segoe UI', Tahoma, Helvetica, Sans-Serif;
+    font-weight: normal;
+}
+
+#tale article .titulocategoria .cursode {
+    font-size: 16px;
+    font-family: "wf_SegoeUILight", "wf_SegoeUI", "Segoe UI Light", "Segoe WP Light", "Segoe UI", "Segoe", "Segoe WP", "Tahoma", "Verdana", "Arial", "sans-serif";
+    display: block;
+}
+
+#tale article .titulocategoria .nometitulocategoria {
+    font-size: 23px;
+    display: block;
+    width: 100%;
+}
+
+#tale article .textocategoria {
+    width: 100%;
+    font-size: 14px;
+    padding-top: 24px;
+}
+
+#tale article .setabaixo {
+    width: 100%;
+    height: 35px;
+    text-align: right;
+}
+
+#tale article .setabaixo a {
+    display: block;
+    text-align: right;
+    padding-right: 10px;
+    outline: none;
+}
+
+#tale article .titulocategoria a, #tale article .textocategoria a {
+    text-decoration: none;
+    display: block;
+}
+
+#tale article a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    text-align: left;
+}
+
+#tale article .textocursos {
+    padding-top: 60px;
+    height: 100%;
+    display: block;
+}
+
+#tale #graduacao {
+    background-color: #e65d5d;
+    border: solid 1px #e65d5d;
+}
+
+#tale #posgraduacao {
+    background-color: #6fc1d2;
+    border: solid 1px #6fc1d2;
+}
+
+#tale #extensao {
+    background-color: #7dc692;
+    border: solid 1px #7dc692;
+}
+
+#tale #educacaodistancia {
+    background-color: #dfbc42;
+    border: solid 1px #dfbc42;
+}
+
+#noticias {
+    width: 68.7%;
+}
+
+#noticias > h1 {
+    padding-left: 18px;
+    font-size: 25px;
+}
+
+.estados {
+    width: 18.43%;
+    height: 30px;
+    position: relative;
+    left: 50px;
+}
+
+#cidades {
+    position: relative;
+    left: 55px;
+    height: 30px;
+}
+
+#cod_cidades {
+    margin: 10px 0 10px 65px;
+    position: relative;
+    height: 30px;
+    width: 56.43%;
+}
+
+.bloconoticia {
+    max-width: 200px;
+    min-height: 210px !important;
+    margin: 4px 0 20px 17px;
+    float: left;
+}
+
+#tituloNoticia {
+    text-align: left;
+    margin: 10px 0;
+    font-size: 12px;
+    line-height: 1.5em;
+}
+
+#imagemNoticia {
+    min-height: 120px;
+}
+
+#imagemNoticia > img {
+    width: 100%;
+}
+
+#txtNoticia {
+    padding: 5px;
+}
+
+#leiamais {
+    text-align: right;
+}
+
+#estado {
+    width: 100px;
+    height: 30px;
+    margin: 0 10px 0 10%;
+}
+
+#cidade {
+    width: 200px;
+    height: 30px;
+    margin: 0 10px 10% 1%;
+}
+
+#matricula > input[type='text'] {
+    width: 54%;
+    height: 36px;
+    margin: 0 0 0 50px;
+}
+
+#matricula > p {
+    text-align: left;
+    margin: 0px 0 2px 53px;
+}
+
+#enviar {
+    margin: 18px 0 0 -77px;
+    height: 35px;
+    width: 30%;
+    border: none;
+    background: #bc9a5c;
+}
+
+#bloco2 > form > div.f-left > a {
+    color: white;
+}
+
+#trabalheconosco {
+    background-image: url('../img/trabalheconosco.png');
+    background-repeat: no-repeat;
+    width: 48%;
+    min-height: 200px;
+    float: left;
+    position: relative;
+    left: -20px;
+}
+
+#scroller {
+    clear: both;
+    border: 1px solid gainsboro;
+    width: 53%;
+    border-radius: 14px;
+    margin: 0 auto;
+}
+
+#barra-acima-rodape {
+    background-color: #E2E2E2;
+    line-height: 40px;
+    clear: both;
+}
+
+.boxrodape > li > a {
+    color: white;
+    line-height: 22px;
+}
+
+.boxrodape > li > h1 {
+    font-size: 16px;
+    text-align: center;
+}
+
+#boxrodape1 {
+    color: white;
+    width: 200px;
+    min-height: 275px;
+    float: left;
+    margin: 10px;
+    border-right: 1px dotted #9e9ba3;
+}
+
+#boxrodape2 {
+    color: white;
+    width: 200px;
+    min-height: 275px;
+    border-right: 1px dotted #9e9ba3;
+    float: left;
+    margin: 10px;
+}
+
+#boxrodape3 {
+    color: white;
+    width: 200px;
+    min-height: 275px;
+    border-right: 1px dotted #9e9ba3;
+    float: left;
+    margin: 10px;
+}
+
+#boxrodape4 {
+    color: white;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    display: table;
+}
+
+#imgrodape {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#rodape {
+    clear: both;
+    min-height: 400px;
+    margin-top: 30px;
+    background-color: #102D4B;
+    padding-top: 20px;
+}
+
+#txt-rodape {
+    font-size: 14px;
+    color: white;
+    clear: both;
+    padding: 30px;
+}
+
+#rodapecentraliza {
+    width: 900px;
+}
+
+ li{
+    list-style: none;
+}
+
+
+
+
+
+
+
+fieldset {
+    border: 1px solid #ddd;
+    padding: 1px;
+    width: 88%;
+    margin-left: 25px;
+    -moz-border-radius: 10px;
+}
+
+#select {
+    width: 420px;
+    height: 100px;
+    min-width: 420px;
+    margin: 6px 0 0 -35px;
+}
+
+#box950 {
+    min-height: 440px;
+    width: 950px;
+}
+
+.centraliza {
+    margin: 0 auto;
+}
+
+.centraliza-texto {
+    margin: 10px;
+    text-align: center;
+}
+
+.texto-esquerda {
+    text-align: left;
+    margin-top: 5%;
+}
+
+.containner100 {
+    width: 100%;
+    min-width: 400px;
+}
+
+.box950 {
+    width: 78%;
+    height: auto;
+}
+
+.box90porcento {
+    width: 90%;
+    height: auto;
+}
+
+.box800 {
+    width: 960px;
+    position: relative;
+}
+
+.box600 {
+    width: 600px;
+    height: auto;
+}
+
+.box500 {
+    width: 500px;
+    height: auto;
+}
+
+.box400 {
+    width: 400px;
+    height: auto;
+    padding: 5px;
+}
+
+.box300 {
+    width: 300px;
+    height: auto;
+    padding: 5px;
+}
+
+.box200 {
+    width: 200px;
+    height: auto;
+    padding: 5px;
+}
+
+.f-left {
+    float: left;
+}
+
+.bloco {
+    color: white;
+    width: 27%;
+    float: left;
+    min-height: 245px;
+    margin: 10px;
+    position: relative;
+    color: black;
+}
+
+@media screen and (min-width:0px) and (max-width:750px) {
+    #logo {
+        padding: 20px 0;
+        width: 96%;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    #login {
+        margin: 9px 11px;
+        width: 83%;
+        clear: both;
+        float: left;
+        padding: 10px;
+    }
+
+    #banner {
+        width: 100%;
+    }
+
+    body {
+        resize: none;
+    }
+
+    #box950 {
+        width: 70%;
+    }
+
+    #nom {
+        width: 200px !important;
+        float: left;
+    }
+
+    #dados {
+        width: 190px !important;
+    }
+
+    .bloco, #noticias {
+        width: 100%;
+    }
+
+    .trabalhec > li {
+        position: relative;
+        width: 100px;
+        height: 20px;
+        margin-top: 5px;
+        color: #CDED4E;
+    }
+
+    fieldset {
+        width: 90%;
+    }
+
+    ul.trabalhec > li:nth-child(1) > p:nth-child(2) > a {
+        color: #fff;
+    }
+
+    .trabalhec {
+        margin: 55px 0 0 30px;
+    }
+
+    #menu ul > li {
+        display: block;
+        border-bottom: 1px solid #666;
+    }
+
+    #barra-acima-rodape ul > li {
+        display: block;
+        border-bottom: 1px solid #666;
+    }
+
+    #dentro-conteudo {
+        height: 1350px;
+    }
+
+    #bloco1 {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #bloco2 {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #bloco2 > form > div.f-left > a, #bloco2 > form > div.f-left > a:visited {
+        color: white !important;
+    }
+
+    #bloco3 {
+        margin-top: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    #bloco4 {
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    #enviar {
+        height: 35px;
+        width: 87px;
+        border: medium none;
+        background: none repeat scroll 0% 0% #BC9A5C;
+        float: left;
+        left: 70px;
+        position: relative;
+        margin: 19px 0 16px -29px;
+    }
+
+    #estado {
+        width: 80%;
+        height: 30px;
+        margin: 0 0 9% 2%;
+    }
+
+    #cidade {
+        width: 80%;
+        height: 30px;
+        margin: 0 0px 10% 2%;
+    }
+
+    #bloco2 > form > a > p {
+        text-align: center;
+        position: relative;
+        color: white;
+    }
+
+    #matricula {
+        width: 60%;
+        float: left;
+        margin-left: 15px;
+    }
+
+    #matricula > p {
+        text-align: left;
+        margin: 0px 0 2px 53px;
+        width: 210px;
+    }
+
+    #bloco2 {
+        text-align: center;
+    }
+
+    #matricula > input[type='text'] {
+        width: 100%;
+        height: 36px;
+        margin: -2px 0 0 33px;
+    }
+
+    #box950 {
+        min-height: 600px;
+        width: 78%;
+    }
+
+    #select {
+        width: 240px;
+        height: 100px;
+        min-width: 330px;
+        margin: 6px 0 0 -35px;
+        text-align: justify;
+    }
+
+    #scroller {
+        display: none;
+    }
+
+    .estados {
+        width: 73%;
+        height: 30px;
+        position: relative;
+        left: 32px;
+    }
+
+    #cidades {
+        position: relative;
+        left: 32px;
+        height: 30px;
+    }
+
+    #cod_cidades {
+        margin: 10px 0 10px 31px;
+        position: relative;
+        height: 30px;
+        width: 72.43%;
+    }
+
+    #trabalheconosco {
+        background-image: url('../img/trabalheconosco.png');
+        background-repeat: no-repeat;
+        width: 96%;
+        min-height: 200px;
+        left: 10px;
+        position: relative;
+    }
+
+    .box800 {
+        width: 100%;
+    }
+
+    .containner100 {
+        width: 100%;
+    }
+
+    #tale article {
+        width: 318.5px;
+    }
+
+    #rodapecentraliza {
+        width: 90%!important;
+    }
+
+}
+
+@media screen and (min-width:751px) and (max-width:5000px) {
+    .trabalhec > li {
+        position: relative;
+        width: 100px;
+        height: 20px;
+        margin-top: 5px;
+        color: #CDED4E;
+    }
+
+    ul.trabalhec > li:nth-child(1) > p:nth-child(2) > a {
+        color: #fff;
+    }
+
+    .trabalhec {
+        margin: 55px 0 0 30px;
+    }
+
+    #estado {
+        width: 100px;
+        height: 30px;
+        margin: 12px 10px 8% 8%;
+    }
+
+    #cidade {
+        width: 62%;
+        height: 30px;
+        margin: 0 10px 10% 1%;
+    }
+
+    #enviar {
+        margin: 8.6% 0 11px -15%;
+        height: 35px;
+        width: 23%;
+        border: none;
+        background: #bc9a5c;
+    }
+
+    #matricula {
+        width: 60%;
+        float: left;
+        margin-left: 35px;
+    }
+
+    #matricula > p {
+        text-align: left;
+        margin: 0px 0 18px 9px;
+        width: 230px;
+    }
+
+
+}

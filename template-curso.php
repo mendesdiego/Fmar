@@ -1,7 +1,14 @@
 <?php /*Template Name: Cursos*/ ?>
 <?php  get_header();?>
+
+<?php if (have_posts()) { ?>
+  <?php while(have_posts()) { ?>
+    <?php the_post(); ?>
+
 <main>
   <div class="container">
+    <?php the_content() ?>
+
     <?php
       $wpcurso = new WP_Query ( array(
         'post_type' => 'cursos' ,
@@ -18,13 +25,13 @@
         )
       );
      ?>
-
   <?php
     if ($wpcurso->have_posts() ): ?>
       <div class="row">
         <?php $i=1 ?>
         <?php while ($wpcurso->have_posts() ): ?>
           <?php $wpcurso-> the_post(); ?>
+
         <div class="col-md-3">
           <div class="box-curso-interno">
             <?php if (has_post_thumbnail() ): ?>
@@ -42,13 +49,20 @@
               </div>-->
 
               <div class="investimento">
-                <p>Investimento:</p>
+                <p>Matrícula:</p>
                 <?php
-                  $valor_de = get_field('valor_de_matricula');
-                   if ($valor_de) { ?>
-                     <span class="valor_matricula_de">De: R$ <?php echo ($valor_de) ?></span>
+                  $valor_de = get_field('valor_matricula');
+                  $valor_por = get_field('valor_matricula_promocional');
+                  $preco_porSemPontos = str_replace('.', '', $valor_por); // remove pontos
+                  $preco_por_float = floatval(str_replace(',', '.', $preco_porSemPontos)); // parsing para
+
+                   if ($preco_por_float > 0) { ?>
+                     <span class="valor_matricula_de">De: R$ <?php echo $valor_de ?></span>
+                     <span class="valor-matricula">Por: R$ <?php echo $valor_por ?></span>
+                <?php } else { ?>
+                  <span class="valor-matricula">R$ <?php echo $valor_de ?></span>
                 <?php } ?>
-                <span class="valor-matricula">Por: R$ <?php echo get_field('valor_matricula') ?></span>
+
               </div>
           </div>
           <div class="botoes-curso">
@@ -68,4 +82,7 @@
     <?php endif; ?>
   </div>
 </main>
+
+  <?php } ?>
+<?php } ?>
 <?php get_footer() ?>

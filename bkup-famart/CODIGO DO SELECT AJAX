@@ -1,0 +1,13 @@
+                <h3 class="centraliza-texto ">CAMPUS VIRTUAL</h3>
+                <hr class="box90porcento centraliza">
+                <form action="#">
+                    <div id="select" >
+                       <td>
+                            <tr><?php include ('select.php') ?></tr>
+                      
+                       </td> 
+                        <div id="matricula" class="f-left box950"><p>Matrícula (somente números)</p><input name="matricula" type="text"></div>
+                        <input id="enviar"class="f-left" type="submit">
+                    </div>
+                    <div class="f-left"><a  href="http://parceria.famart.com.br/cursos/login/forgot_password.php">Não sei ou esqueci minha matrícula</a></div>
+                </form>

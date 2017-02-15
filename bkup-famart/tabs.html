@@ -1,0 +1,191 @@
+<meta http-equiv = "Content-Type" content = "text/html;charset=utf-8" />
+<style>
+    tr, td {
+        border: 1px solid #DADADA;
+        padding: 5px;
+    }
+
+    h2, h3, p {
+        margin: 0 0 15px 0;
+
+        font-size: 12px;
+    }
+
+
+    #tabs {
+
+        overflow: auto;
+        width: 64%;
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #tabs li {
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+
+    #tabs a {
+        -moz-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+        -webkit-box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+        box-shadow: -4px 0 0 rgba(0, 0, 0, .2);
+        background: #ad1c1c;
+        background: -moz-linear-gradient(220deg, transparent 10px, #ad1c1c 10px);
+        background: -webkit-linear-gradient(220deg, transparent 10px, #ad1c1c 10px);
+        background: -ms-linear-gradient(220deg, transparent 10px, #ad1c1c 10px);
+        background: -o-linear-gradient(220deg, transparent 10px, #ad1c1c 10px);
+        background: linear-gradient(220deg, transparent 10px, #4F67C3 10px);
+        text-shadow: 0 1px 0 rgba(0, 0, 0, .5);
+        color: #fff;
+        float: left;
+        font: bold 12px/35px 'Lucida sans', Arial, Helvetica;
+        height: 35px;
+        padding: 0 30px;
+        text-decoration: none;
+    }
+
+    #tabs a:hover {
+        background: #c93434;
+        background: -moz-linear-gradient(220deg, transparent 10px, #c93434 10px);
+        background: -webkit-linear-gradient(220deg, transparent 10px, #c93434 10px);
+        background: -ms-linear-gradient(220deg, transparent 10px, #c93434 10px);
+        background: -o-linear-gradient(220deg, transparent 10px, #c93434 10px);
+        background: linear-gradient(220deg, transparent 10px, #212C54 10px);
+    }
+
+    #tabs a:focus {
+
+        outline: 0;
+    }
+
+    #tabs #current a {
+        background: #212C54;
+        background: -moz-linear-gradient(220deg, transparent 10px, #fff 10px);
+        background: -webkit-linear-gradient(220deg, transparent 10px, #fff 10px);
+        background: -ms-linear-gradient(220deg, transparent 10px, #fff 10px);
+        background: -o-linear-gradient(220deg, transparent 10px, #fff 10px);
+        background: linear-gradient(220deg, transparent 10px, #212C54 10px);
+        text-shadow: none;
+        color: #fff;
+    }
+
+    #content {
+        margin: 0 auto;
+        width: 65.5%;
+        background-color: #fff;
+
+        -moz-border-radius: 0 2px 2px 2px;
+        -webkit-border-radius: 0 2px 2px 2px;
+        border-radius: 0 2px 2px 2px;
+
+        padding: 30px;
+    }
+
+    #tab1 > table {
+        width: 43%;
+        float: left;
+        margin: 12px;
+        font-size: 12px;
+        min-height: 450px;
+        height: 550px;
+    }
+
+    #tab1 > p {
+        clear: both;
+        width: 89%;
+        padding-left: 14px;
+    }
+
+    #tab1 > table:nth-child(12) {
+        width: 88.4%;
+    }
+
+    /* Remove the rule below if you want the content to be "organic" */
+    #content div {
+
+    }
+    #tab3 > p, #tab2 > p, #tab1 > p, #tab4 > p{
+       text-align: justify!important;
+        display: block;
+        width: 72%;
+        padding-left: 31px;
+    }
+    #tab2 {
+        line-height: 20px;
+        padding-left: 50px;
+    }
+
+    /* --- */
+
+</style>
+
+
+<ul id = "tabs">
+    <li><a href = "#" title = "tab1">MATRIZ CURRICULAR</a></li>
+    <li><a href = "#" title = "tab2">DOCENTES</a></li>
+
+    <li><a href = "#" title = "tab3">OBJETIVOS</a></li>
+    <li><a href = "#" title = "tab4">PUBLICO ALVO</a></li>
+    <!-- <li><a href="#" title="tab5">FUNCIONAMENTO DO CURSO</a></li>     -->
+</ul>
+
+<div id = "content">
+    <div id = "tab1">
+        <?php echo $linha['matriz_curricular'] ?>
+    </div>
+    <div id = "tab2">
+        <?php echo $linha['docentes'] ?>
+    </div>
+    <div id = "tab3">
+
+        <p><?php echo $linha['objetivos'] ?></p>
+    </div>
+    <div id = "tab4">
+
+        <p><?php echo $linha['publico_alvo'] ?></p>
+    </div>
+
+    <div id = "tab5">
+        <h2>Cum sociis natoque penatibus</h2>
+
+        <p>Magnis dis parturient montes, nascetur ridiculus mus. Nullam ac massa quis nisi porta mollis venenatis sit
+           amet urna. Ut in mauris velit, sed bibendum turpis.</p>
+
+        <p>Nam ornare vulputate risus, id volutpat elit porttitor non. In consequat nisi vel lectus dapibus sodales.
+           Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
+           bibendum sagittis libero.</p>
+
+        <h3>Imperdiet sem interdum nec</h3>
+
+        <p>Mauris rhoncus tincidunt libero quis fringilla.</p> More script and css style
+                                                               :
+
+    </div>
+
+
+</div>
+
+
+
+
+<script src = "http://code.jquery.com/jquery-1.6.3.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#content div").hide(); // Initially hide all content
+        $("#tabs li:first").attr("id", "current"); // Activate first tab
+        $("#content div:first").fadeIn(); // Show first tab content
+
+        $('#tabs a').click(function (e) {
+            e.preventDefault();
+            $("#content div").hide(); //Hide all content
+            $("#tabs li").attr("id", ""); //Reset id's
+            $(this).parent().attr("id", "current"); // Activate this
+            $('#' + $(this).attr('title')).fadeIn(); // Show content for current tab
+        });
+    })();
+</script>
+
+

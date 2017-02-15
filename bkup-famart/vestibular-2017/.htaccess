@@ -1,0 +1,3 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule (.*) http://famart.edu.br/$1 [R=301,L]

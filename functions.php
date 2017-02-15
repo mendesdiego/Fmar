@@ -223,3 +223,35 @@ function get_current_slug($echo=false){
   return $slug;
 }
 /***********************************************************************************/
+
+/******************Remove Caracteres Especiais**************************************/
+
+function removerCaracteresEspeciais($string) {
+  $string = preg_replace("/&([a-z])[a-z]+;/i", "$1", htmlentities(trim($string)));
+  return $string ;
+}
+
+/*************************************************************************************/
+
+
+/**************************ENVIA PREÇO AO PAGSEGURO*********************************/
+
+function getPrecoToSendPagSeguro($preco) {
+  $semPontos = str_replace('.', '', $preco) ; // remove os pontos
+  return  str_replace(',', '.', $semPontos) ; // substitui a vírgula por ponto
+}
+
+/***********************************************************************************/
+
+
+/*********************************INSERE MASCARAS NOS CAMPOS**********************/
+
+function chamarScripsParaAdmin() {
+  wp_enqueue_script( 'jquery-priceformat', get_template_directory_uri() . '/js/jquery.priceformat.min.js' );
+  wp_enqueue_script( 'commom-admin', get_template_directory_uri() . '/js/commom-admin.js' );
+  // obs: ver solução para chmar apenas em páginas específicas
+}
+add_action( 'admin_enqueue_scripts', 'chamarScripsParaAdmin' );
+
+
+/*******************************************************************************/

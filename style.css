@@ -42,7 +42,7 @@ main {
 
 .item-contato-top {
   margin-right: 15px;
-  font-size: 30px;
+  font-size: 28px;
 }
 
 .img-contato-top {
@@ -127,6 +127,7 @@ main {
 .titulo-curso {
   color: #505a78;
   font-weight: bold;
+  height: 52px;
 }
 
 .desc-curso {
@@ -278,6 +279,21 @@ main {
   text-decoration: line-through;
 }
 
+.valor_matricula_de_pedagogia {
+  color: #150958;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  text-decoration: line-through;
+}
+
+.valor_promocional_pedagogia {
+  color: #150958;
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+}
+
 .valor-matricula {
   color: #150958;
   text-align: center;
@@ -286,6 +302,9 @@ main {
   display: block;
 }
 
+.informacoes {
+  margin-top: 30px;
+}
 
 .botoes-curso {
   margin-bottom: 30px;
@@ -641,6 +660,241 @@ label {
   text-align: center;
 }
 
+/* ini: wrap-content-form-pre-matricula  */
+
+.main-page-curso-form-pre-matricula .box-preco  {
+  background-color: #150958;
+}
+
+.main-page-curso-form-pre-matricula .box-info {
+  background-color: #f3f3f4;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+.main-page-curso-form-pre-matricula .box-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.main-page-curso-form-pre-matricula .box-preco {
+  padding: 0px;
+}
+.main-page-curso-form-pre-matricula .box-preco  h3{
+  background-color: #7cdf95;
+  margin: 0px;
+  color: white;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+
+.main-page-curso-form-pre-matricula .box-preco .pseudo-body {
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+.main-page-curso-form-pre-matricula .box-preco .preco {
+  font-size: 30px;
+}
+
+.formas-de-parcelamento {
+  margin-top: 30px;
+  padding: 15px 15px 0;
+  background-color: #F3F3F4;
+}
+
+.formas-de-parcelamento .row-itens {
+  padding-top: 15px;
+}
+.formas-de-parcelamento .row-itens .item{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.formas-de-parcelamento .row-itens .item .wrap-all-preco-de {
+  font-family: 'Montserrat', sans-serif;
+  color: #150958;
+  font-weight: bold;
+}
+.formas-de-parcelamento .row-itens .item .wrap-all-preco-por {
+  font-family: 'Montserrat', sans-serif;
+  color: #150958;
+  font-weight: bold;
+}
+.formas-de-parcelamento .row-itens .item .wrap-preco-por .prefixo,
+.formas-de-parcelamento .row-itens .item .wrap-preco-de .prefixo  {
+
+}
+
+
+.formas-de-parcelamento .row-itens .item .wrap-radio-option{
+  text-align: center;
+  padding-top: 15px;
+}
+.wrap-content-form-pre-matricula {
+  padding-top: 20px;
+}
+
+.wrap-content-form-pre-matricula h5 {
+  font-size: 16px;
+  margin-top: 22px;
+  margin-bottom: 18px;
+}
+.wrap-content-form-pre-matricula .form-group input,
+.wrap-content-form-pre-matricula .form-group select,
+.wrap-content-form-pre-matricula .form-group textarea {
+  border-color: #e0e0e0;
+}
+.wrap-content-form-pre-matricula  input[type="submit"] {
+  border: 0px;
+  margin-top: 15px;
+}
+.como-soube-do-curso .wpcf7-list-item  {
+  display: block;
+}
+.wrap-content-form-pre-matricula .btn-consultar-cep {
+  width: 100%;
+  background-color: #575757;
+  display: block;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Montserrat Light';
+  padding: 6px 15px;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.wrap-content-form-pre-matricula .wrap-check-aceito {
+  padding-top: 15px;
+}
+.wrap-content-form-pre-matricula .abre-regulamento {
+  color: #0099db;
+  cursor: pointer;
+}
+.wrap-content-form-pre-matricula .wpcf7-response-output  {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.row-meios-de-pagamento {
+  padding-top: 40px;
+}
+.row-meios-de-pagamento img {
+  margin: 0 auto;
+}
+#modal-pagamento .wrap-btn {
+  padding-top: 30px;
+  text-align: center;
+}
+/* end: wrap-content-form-pre-matricula  */
+
+.box-call-matricule {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.call-matricule {
+  background: #150958;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0px !important;
+}
+
+.box-matricula {
+  background: #e8e8e8;
+  text-transform: uppercase;
+  color: #150958;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.quero-ser-aluno {
+  background: #150958;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0px !important;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.ja-aluno {
+  background: #7cdf95;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0px !important;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.box-aluno {
+  background: #e8e8e8;
+  text-transform: uppercase;
+  color: #150958;
+  text-align: center;
+  padding: 10px;
+}
+
+.btn-ser-aluno {
+  background: #7cdf95;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+}
+
+.btn-ser-aluno:hover {
+  background: #150958;
+  color: #fff !important;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+  transition-duration: 1s;
+}
+
+.btn-ja-aluno {
+  background: #150958;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+}
+
+.btn-ja-aluno:hover {
+  background: #7cdf95;
+  color: #fff !important;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+  transition-duration: 1s;
+}
+
+.btn-enviar {
+  background: #150958;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+}
+
+.btn-enviar:hover {
+  background: #7cdf95;
+  color: #fff !important;
+  text-transform: uppercase;
+  border-radius: 0px !important;
+  transition-duration: 1s;
+}
+
+.tabela-grade-cursos caption {
+  background-color: #150958;
+  color: white;
+  font-weight: bold;
+}
+.tabela-grade-cursos .negritar-linha td{
+  font-weight: bold;
+}
+
 /***************************MENU*******************************/
 
 .navbar-brand {
@@ -721,5 +975,28 @@ footer {
 .icon-menu-footer {
   padding-right: 10px;
 }
-
 /*************************************************************/
+
+/********************MEDIA QUERIES**************************/
+
+@media screen and (min-width: 768px) {
+  /*
+   * Row with equal height columns
+   * --------------------------------------------------
+   */
+  .row-eq-height-from-sm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display:         flex;
+  }
+  .float-left-from-sm {
+    float: left;
+  }
+  .float-right-from-sm {
+    float: right;
+  }
+}
+
+
+/*********************************************************/

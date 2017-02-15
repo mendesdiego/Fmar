@@ -1,0 +1,6 @@
+@media screen and (max-width: 768px) {
+	.box-50-left{
+		width: 50%;
+		float: left;
+	}
+}
