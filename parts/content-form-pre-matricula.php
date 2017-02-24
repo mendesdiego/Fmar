@@ -19,7 +19,7 @@
           <? if(get_the_ID() == 158) {?>
             <h3>MENSALIDADES À PARTIR DE</h3>
           <? } else {?>
-            <h3>PRÉ-MATRÍCULA</h3>
+            <h3>MATRÍCULA</h3>
           <? } ?>
 
           <div class="pseudo-body">
@@ -31,13 +31,23 @@
                 $preco_por_float = floatval(str_replace(',', '.', $preco_porSemPontos)); // parsing para
 
                  if ($preco_por_float > 0) { ?>
-                   R$ <?php echo $valor_de ?>
                    R$ <?php echo $valor_por ?>
                  <?php } else { ?>
                    R$ <?php echo $valor_de ?>
                  <?php } ?>
             </h4>
-            <p>O inscrito estará garantindo a matrícula nesse valor</p>
+
+            <?php
+              $taxonomiasDoSingle = wp_get_post_terms( get_the_ID(), 'categoria-curso');
+              $taxonomiasDoSingle [0]->slug
+            ?>
+
+            <?php
+              if (get_the_ID() == 158 || $taxonomiasDoSingle [0]->slug == 'cursos-tecnicos')  { ?>
+                <p>*Consulte condições de pagamento</p>
+              <?php } else { ?>
+                  <p>Preencha o formulário para realizar a sua inscrição</p>
+            <?php } ?>
           </div>
         </div>
 
@@ -47,9 +57,6 @@
           <p class="font-montserrat-bold">Este é o valor pago referente apenas à matrícula.</p>
           <p>
           As demais mensalidades serão emitidas no valor real estabelecido pela instituição. O valor do curso poderá ser ajustado de acordo com desconto* por pagamento em dia.
-          </p>
-          <p>
-          *Consulte regulamento no colégio.
           </p>
         </div>
 
@@ -151,12 +158,6 @@
         <? echo str_replace(array('<p>','</p>', '<p></p>'), array('','',''), wpautop(do_shortcode('[contact-form-7 id="397" title="Form-prematricula"]'))) ;  ?>
 
       </div> <!-- wrap-content-form-pre-matricula -->
-
-      <div class="row row-meios-de-pagamento">
-        <div>
-          <img class="img-responsive"  src="<?php bloginfo('template_url') ?>/images/bar-operadores-meio-de-pagamento.jpg" />
-        </div>
-      </div>
     </div> <!-- end container -->
 
     <!-- ini: modal regulamento curso -->

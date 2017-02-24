@@ -45,17 +45,31 @@
                    <?php endif; ?>
                    <h3 class="titulo-interno-curso"><?php echo get_the_title() ?></h3>
                    <p class="duracao-curso"><?php echo get_field('duracao') ?></p>
-                   <p class="investimento">Matrícula:
+
+                   <div class="investimento">
+                     <?php
+                      $exibeValorCurso = get_field('exibir_valor_curso_ou_matricula');
+                       if ($exibeValorCurso == 'Matrícula') { ?>
+                         <p><?php echo $exibeValorCurso; ?></p>
+                       <?php
+                         }
+                         else { ?>
+                           <p><?php echo $exibeValorCurso?></p>
+                       <?php } ?>
+
                      <?php
                        $valor_de = get_field('valor_matricula');
                        $valor_por = get_field('valor_matricula_promocional');
-                        if ($valor_por) { ?>
+                       $preco_porSemPontos = str_replace('.', '', $valor_por); // remove pontos
+                       $preco_por_float = floatval(str_replace(',', '.', $preco_porSemPontos)); // parsing para
+
+                        if ($preco_por_float > 0) { ?>
                           <span class="valor_matricula_de">De: R$ <?php echo $valor_de ?></span>
                           <span class="valor-matricula">Por: R$ <?php echo $valor_por ?></span>
                      <?php } else { ?>
                        <span class="valor-matricula">R$ <?php echo $valor_de ?></span>
                      <?php } ?>
-                   </p>
+                   </div>                   
                </div>
                <div class="botoes-curso">
                  <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>

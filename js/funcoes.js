@@ -97,7 +97,6 @@ jQuery(document).ready(function(){
   //
   $('.wrap-content-form-pre-matricula form').submit(function(event) {
     //event.preventDefault(); //this will prevent the default submit
-		console.log('deuy submit') ;
 
 		var telefoneCelular = $("#telefone-celular").val();
 	     if(telefoneCelular.length > 0) {
@@ -123,6 +122,8 @@ jQuery(document).ready(function(){
 
 	// adiciona table resposnive às tabelas do content da table
   $(".main-page-curso-mais-informacoes .panel-body table" ).addClass('table-responsive') ;
+
+	
 
   // pode ser usada em outras áreas do site, basta colocar a classe .carregar-estados-do-brasil
   if ( $( ".carregar-estados-do-brasil" ).length ) {
@@ -151,9 +152,9 @@ jQuery(document).ready(function(){
 			if(window.innerWidth >= 768 ) {
 				// aplicar background
 				var box = $('.main-page-curso-form-pre-matricula .box-img') ;
-				console.log(box) ;
+				//console.log(box) ;
 				var bg = box.attr("data-background-img");
-				console.log('bg: ' + bg) ;
+				//console.log('bg: ' + bg) ;
 				box.css("background-image", 'url("' + bg + '")');
 			} else {
 				// remover background
@@ -181,3 +182,28 @@ jQuery(document).ready(function(){
 
 		trocarModalRegulamentoPorLinkDoEdital($('#hidden-id-curso'), $('#hidden-link-do-edital')) ;
 	});
+
+	/* ini: carousel banner rotarivo responsivo */
+  function setCarouselImage(carousel) {
+    var windowsize = $(window).width();
+
+    carousel.find( '.item' ).each(function() {
+      var imgCelular = $(this).attr("data-img-celular");
+      var imgTablet = $(this).attr("data-img-tablet");
+      var imgDesktop = $(this).attr("data-img-desktop");
+
+      if (windowsize < 768) {
+        $(this).css("background-image", "url('" + imgCelular + "')");
+      } else if (windowsize >= 768 && windowsize < 992) {
+        $(this).css("background-image", "url('" + imgTablet + "')");
+      } else if (windowsize >= 992) {
+        $(this).css("background-image", "url('" + imgDesktop + "')");
+      }
+    });
+  }
+  setCarouselImage($("#carousel-home"));
+   window.addEventListener("resize", function () {
+      console.log("resize");
+      setCarouselImage($("#carousel-home"));
+  }, false);
+  /* end: carousel banner rotarivo responsivo */

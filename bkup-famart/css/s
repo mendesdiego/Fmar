@@ -1,7 +1,0 @@
-   <?php
-    //Sua pasta
-    $files = glob("img/patrocinadores/*.*");
-    for ($i = 0; $i < count($files); $i++) {
-        $num = $files[$i];
-        echo("<li><img src=' {$num} ' /><li>");
-    } ?>

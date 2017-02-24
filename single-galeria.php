@@ -5,31 +5,30 @@
     <?php while (have_posts()): the_post(); ?>
 
       <div id="single-galeria">
-
-
         <section class="lista">
           <div class="container">
+            <h3><?php the_title() ?></h3>
               <? $i = 1 ?>
                 <?
                 $images = get_field('galeria');
                 if( !empty($images) ){ ?>
-
                   <?php foreach ($images as $image) {?>
                     <div class="item col-sm-6 col-md-3 col-lg-3" data-image-id="" data-toggle="modal" data-title="" data-caption="" data-image="<?php echo $image[sizes][large]; ?>" data-target="#image-gallery">
                       <div class="img-galeria">
-                        <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>"  class="img-responsive"/>
+                        <a href="<?php echo $image['url']; ?>" rel="lightbox">
+                           <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="img-responsive"/>
+                        </a>
                       </div>
                     </div>
                     <? if($i % 4 == 0) { ?>
                       <div class="clearfix visible-md-block visible-lg-block"></div>
                     <? } ?>
                     <? $i++ ?>
-                    <? } ?>
-                  <?php } ?>
+                  <? } ?>
+                <?php } ?>
             </div><!-- row -->
           </div>
         </section>
-
       </div>
     <?php endwhile; ?>
   <?php endif; ?>

@@ -2,8 +2,61 @@
 
 <?php get_header() ?>
 
-    <section class="banner">
-      <?php echo do_shortcode ('[rev_slider alias="home_slider"]'); ?>
+    <?
+       $wpCarouselHome = new WP_Query(array(
+         'post_type' => 'carousel-home',
+         'posts_per_page' => 10,
+         'orderby' => 'menu_order date',
+         'order'   => 'ASC',
+       ));
+
+     ?>
+
+
+    <section id="section-carousel-home">
+      <div id="carousel-home" class="carousel slide" data-ride="carousel" data-interval="5000">
+        <!-- Indicators
+        <ol class="carousel-indicators">
+          <? for ($j = 0; $j < $wpCarouselHome->post_count; $j++) { ?>
+            <li data-target="#carousel-home" data-slide-to="<?=$j?>" class="<?echo ($j == 0 ? 'active' : null)?>"><?=$j+1?></li>
+          <? } ?>
+        </ol>-->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+        <? $i = 0 ?>
+        <? while ( $wpCarouselHome->have_posts() ) { ?>
+          <?  $wpCarouselHome->the_post(); ?>
+
+          <?
+          $imgCelular = get_field( "imagem_celulares" ) ;
+          $imgTablets = get_field( "imagem_tablets" ) ;
+          $imgDesktops = get_field( "imagem_desktop" ) ;
+
+          $calToAction = get_field( "call_to_action" ) ;
+
+          ?>
+
+
+          <div class="item <?=($i == 0) ? 'active' : null ?>" data-img-celular="<?=$imgCelular['url']?>" data-img-tablet="<?=$imgTablets['url']?>" data-img-desktop="<?=$imgDesktops['url']?>">
+            <? if($calToAction) { ?>
+              <a class="fill-link" href="<?=$calToAction?>" target="<?=( get_field('abrir_em_nova_aba') ) ? '_BLANK' : null?>"></a>
+            <? } ?>
+          </div>
+          <? $i++ ?>
+        <? } ?>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-home" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-home" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </section>
 
     <section class="sobre">
@@ -39,7 +92,8 @@
 
         <div class="row">
           <div class="col-md-3">
-            <img src="<?php echo get_template_directory_uri() ?>/images/banner-destaque.jpg" alt="" class="img-responsive banner-lateral">
+            <img src="<?php echo get_template_directory_uri() ?>/images/banner-destaque.jpg" alt="" class="img-responsive banner-lateral visible-xs visible-lg">
+            <img src="<?php echo get_template_directory_uri() ?>/images/banner-lateral-mobile.jpg" alt="" class="img-responsive banner-lateral-mobile hidden-xs visible-sm hidden-lg">
           </div>
           <div class="col-md-9">
             <?php
@@ -59,7 +113,7 @@
             <?php if( $the_query->have_posts() ): ?>
             	<div class="row">
                 <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            	  <div class="col-md-4">
+            	  <div class="col-md-4 col-sm-4">
                   <div class="box-curso">
                     <?php if(has_post_thumbnail()) { ?>
                       <a href="<?php the_permalink() ?>">

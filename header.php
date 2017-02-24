@@ -41,13 +41,13 @@
     <header>
       <section class="bar-top">
         <div class="container">
-          <div>
-            <a class="navbar-brand" href="<?php echo esc_url(home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt=""></a>
-          </div>
           <div class="row">
+            <div class="col-md-2">
+              <a class="navbar-brand" href="<?php echo esc_url(home_url('/') ); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/logo.png" alt=""></a>
+            </div>
             <div class="col-md-6">
               <div class="contato-top">
-                <h4 class="matricule-top">Matricule-se</h4>
+                <span class="matricule-top">Matricule-se</span>
                 <ul class="list-unstyled list-inline">
                   <li class="item-contato-top"><img src="<?php echo get_template_directory_uri() ?>/images/phone.png" alt="" class="img-contato-top"> 0800 037 4212</li>
                   <li><img src="<?php echo get_template_directory_uri() ?>/images/mail.png" alt="" class="img-contato-top">atendimento@famart.edu.br</li>
@@ -62,7 +62,6 @@
                   <li><a href="https://www.instagram.com/famartfaculdademartins/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/instagram.png" alt="" class="icon-social"></a></li>
                   <li><a class="btn btn-area" href="http://ava.famart.edu.br/login/index.php" role="button" target="_blank"><i class="fa fa-lock cadeado-area" aria-hidden="true"></i> Área do Aluno</a></li>
                 </ul>
-                <?php get_template_directory_uri() ?>
               </div>
             </div>
           </div>
@@ -80,6 +79,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
+            <p class="menu-mobile visible-xs-block visible-sm-block">MENU</p>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->

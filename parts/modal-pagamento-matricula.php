@@ -12,9 +12,9 @@
 
           <?
             $matricula = get_field('valor_matricula') ;
-            $descontoNaMatricula = get_field('desconto_ocasional_na_matricula');
+            $descontoNaMatricula = get_field('valor_matricula_promocional');
             if($descontoNaMatricula) {
-              $matricula = getMatriculaComDesconto($matricula, $descontoNaMatricula) ;
+              $matricula = $descontoNaMatricula ;
             }
           ?>
            Clique no botão abaixo para escolher a forma de pagamento da sua <strong>taxa de Inscrição - R$ <?=$matricula?></strong>.<br>
@@ -25,7 +25,7 @@
               <form method="post" target="pagseguro" action="https://pagseguro.uol.com.br/v2/checkout/payment.html" accept-charset="UTF-8">
 
                 <!-- Campos obrigatórios -->
-                <input name="receiverEmail" type="hidden" value="matricula-online@cotemar.com.br">
+                <input name="receiverEmail" type="hidden" value="auditoria@grupoandrademartins.com.br">
                 <input name="currency" type="hidden" value="BRL">
 
                 <!-- Itens do pagamento (ao menos um item é obrigatório) -->

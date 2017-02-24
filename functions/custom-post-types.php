@@ -108,6 +108,29 @@ function galeria_register() {
 	register_post_type('galeria',$args);
 }
 
+/* ini: post type: carousel-home */
+add_action('init', 'registrar_post_type_carousel');
+function registrar_post_type_carousel() {
+	register_post_type('carousel-home',  array(
+	  'labels' => array(
+	  'name' => 'Todas os itens do carousel home',
+	  'add_new' => 'Adicionar item',
+	  'add_new_item' => 'Novo item',
+	  'edit_item' => 'Editar item',
+	  'new_item' => 'Ver item',
+	  'search_items' => 'Procurar por item',
+	  'not_found' => 'Nenhum registro encontrado',
+	  'not_found_in_trash' => 'Nada encontrado na lixeira',
+	  'menu_name' => 'Carousel Home',
+	  ),
+	  'public' => true,
+	  'hierarchical' => false,
+	  'supports' => array('title', 'page-attributes'),
+	  'menu_icon' => 'dashicons-slides'
+	)) ;
+}
+/* end: post type: carousel-home */
+
 /* ----------------------------------------------------- */
 /* Taxonomias */
 /* ----------------------------------------------------- */

@@ -8,7 +8,7 @@
           <li><a href="#"><img src="<?php echo get_template_directory_uri() ?>/images/twitter-baixo.png" alt=""></a></li>
           <li><a href="https://www.instagram.com/famartfaculdademartins/" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/instagram-logo.png" alt=""></a></li>
         </ul>
-        <p><img src="<?php echo get_template_directory_uri() ?>/images/selo-social-menor.png" alt="" class="img-responsive center-block"></p>
+        <p><img src="<?php echo get_template_directory_uri() ?>/images/selo-social-menor.png" alt="" class="img-responsive center-block selo-footer"></p>
       </div>
     </div>
     <div class="col-md-3">

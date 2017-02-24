@@ -68,7 +68,6 @@
 
 
           <div class="informacoes">
-
              <div class="informacoes-panels visible-xs-block visible-sm-block">
 
                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
@@ -97,63 +96,33 @@
                      <?php } ?>
                    <?php } ?>
 
+
+                   <?
+                   if( have_rows('tabela_de_grade_curricular') ) { ?>
+                   <!-- Inicio Tabela Grade do Curso Mobile-->
                    <div class="panel panel-default">
                      <div class="panel-heading">
                        <h4 class="panel-title">
                          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse_grade">
-                           Grade
+                           PROGRAMA DO CURSO
                          </a>
                        </h4>
                      </div>
                      <div id="collapse_gra">
                        <div class="panel-body">
-                         <?
-                         if( have_rows('tabela_de_grade_curricular') ) { ?>
-                           <? while ( have_rows('tabela_de_grade_curricular') ) { ?>
-                             <? the_row() ?>
-                             <table class="tabela-grade-cursos table table-striped table-bordered table-hover table-responsive">
-                               <caption class="text-center"><? the_sub_field('nome_da_tabela'); ?></caption>
-                               <thead>
-                                 <tr>
-                                   <th>COMPONENTES CURRICULARES</th>
-                                   <th class="text-center" colspan="2">CARGA HORÁRIA</th>
-                                 </tr>
-                                 <tr>
-                                   <th></th>
-                                   <th class="text-center">Carga horária (semanal) </th>
-                                   <th class="text-center">Carga horária (semestral)</th>
-                                 </tr>
-                               </thead>
 
-                                 <?
-                                 if( have_rows('grade_curricular') ) { ?>
-                                  <tbody>
-                                   <? while ( have_rows('grade_curricular') ) { ?>
-                                     <? the_row() ?>
-                                     <?
-                                     $coluna1 = get_sub_field('coluna_1');
-                                     $coluna2 = get_sub_field('coluna_2');
-                                     $coluna3 = get_sub_field('coluna_3');
+                           <? get_template_part( 'parts/grade', 'curricular' ); ?>
 
-                                     $negritarLinha = get_sub_field('negritar_linha');
-                                     ?>
-                                     <tr class=" <?=($negritarLinha == true ? 'negritar-linha' : null) ?>">
-                                       <td><?=$coluna1?></td>
-                                       <td class="text-center"><?=($coluna2 != null ? $coluna2 : '-') ?></td>
-                                       <td class="text-center"><?=($coluna3 != null  ? $coluna3 : '-') ?></td>
-                                     </tr>
-                                   <? } ?>
-                                   </tbody>
-                                 <? }?>
-                             </table>
-                           <? }?>
-                         <? }?>
                        </div>
                      </div>
                    </div> <!-- .panel -->
+                   <? }?>
+
+
 
                </div>
              </div>
+             <!--Fim tabela Grade do Curso-->
 
 
              <div class="informacoes-tabs hidden-xs hidden-sm">
@@ -172,11 +141,13 @@
                  <?php } ?>
 
                  <?php } ?>
+                 <? if( have_rows('tabela_de_grade_curricular') ) { ?>
                  <li role="presentation" class="<?=($i == 1) ? 'active' : null; ?> ">
                    <a href="#aba_grade" aria-controls="aba_grade" role="tab" data-toggle="tab" class="">
-                     Grade
+                     PROGRAMA DO CURSO
                    </a>
                  </li>
+                 <? } ?>
                </ul>
 
                <!-- Tab panes -->
@@ -188,58 +159,19 @@
                  <div role="tabpanel" class="tab-pane <?=($i == 1) ? 'active' : null; ?> <?=(strlen($conteudo) > 600 && 'titulo_aba'.$number != 'titulo_aba5') ? 'duas-colunas-automaticamente' : null; ?>" id="<?php echo 'titulo_aba'.$number ?>">
                    <? echo $conteudo?>
                  </div>
-                 <?php } ?>
                  <?php $i++ ?>
                  <?php } ?>
-                 <div role="tabpanel" class="tab-pane" id="aba_grade">
-                   <?
-                   if( have_rows('tabela_de_grade_curricular') ) { ?>
-                     <? while ( have_rows('tabela_de_grade_curricular') ) { ?>
-                       <? the_row() ?>
-                       <table class="tabela-grade-cursos table table-striped table-bordered table-hover table-responsive">
-                         <caption class="text-center"><? the_sub_field('nome_da_tabela'); ?></caption>
-                         <thead>
-                           <tr>
-                             <th>COMPONENTES CURRICULARES</th>
-                             <th class="text-center" colspan="2">CARGA HORÁRIA</th>
-                           </tr>
-                           <tr>
-                             <th></th>
-                             <th class="text-center">Carga horária (semanal) </th>
-                             <th class="text-center">Carga horária (semestral)</th>
-                           </tr>
-                         </thead>
 
-                           <?
-                           if( have_rows('grade_curricular') ) { ?>
-                            <tbody>
-                             <? while ( have_rows('grade_curricular') ) { ?>
-                               <? the_row() ?>
-                               <?
-                               $coluna1 = get_sub_field('coluna_1');
-                               $coluna2 = get_sub_field('coluna_2');
-                               $coluna3 = get_sub_field('coluna_3');
+                 <?php } ?>
 
-                               $negritarLinha = get_sub_field('negritar_linha');
-                               ?>
-                               <tr class=" <?=($negritarLinha == true ? 'negritar-linha' : null) ?>">
-                                 <td><?=$coluna1?></td>
-                                 <td class="text-center"><?=($coluna2 != null ? $coluna2 : '-') ?></td>
-                                 <td class="text-center"><?=($coluna3 != null  ? $coluna3 : '-') ?></td>
-                               </tr>
-                             <? } ?>
-                             </tbody>
-                           <? }?>
-                       </table>
-                     <? }?>
-                   <? }?>
+                 <? if( have_rows('tabela_de_grade_curricular') ) { ?>
+                 <div role="tabpanel" class="tab-pane <?=($i == 1) ? 'active' : null; ?>" id="aba_grade">
+                    <? get_template_part( 'parts/grade', 'curricular' ); ?>
                  </div>
+                 <? }?>
                </div>
-
              </div>
            </div>
-
-
         </div>
       </section>
     </main>

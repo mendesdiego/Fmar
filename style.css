@@ -322,7 +322,7 @@ main {
   color: #fff;
   border-radius: 0px !important;
   text-align: center;
-  padding: 6px 39px !important;
+  padding: 6px 42px !important;
 }
 
 .btn-curso-interno {
@@ -379,6 +379,12 @@ label {
 
 .conteudo-curso {
   margin-top: 30px;
+}
+
+.informacoes-tabs .tab-content {
+  background-color: #f2f2f2;
+  padding: 15px 25px;
+  min-height: 300px;
 }
 
 .tab-content {
@@ -488,9 +494,9 @@ label {
   margin-bottom: 30px;
 }
 
-.panel-heading {
-  margin-top: 30px;
-}
+/*.panel-heading {
+  margin-bottom: 30px;
+}*/
 
 .body-blog {
   background: #e9eaed;
@@ -654,6 +660,12 @@ label {
   color: #fff;
   text-align: center;
   border-bottom: none !important;
+}
+
+.tabela-grade-cursos caption {
+  background: #150958;
+  color: #fff;
+  font-weight: bold;
 }
 
 .subtitulo-modulo {
@@ -886,12 +898,11 @@ label {
   transition-duration: 1s;
 }
 
-.tabela-grade-cursos caption {
-  background-color: #150958;
-  color: white;
-  font-weight: bold;
+.conteudo-template-curso {
+  margin: 30px 0;
 }
-.tabela-grade-cursos .negritar-linha td{
+
+.negritar-linha {
   font-weight: bold;
 }
 
@@ -977,7 +988,196 @@ footer {
 }
 /*************************************************************/
 
+
+/* ini: carousel home 326px*/
+#carousel-home {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+#carousel-home, #carousel-home .item {
+  height: 326px;
+}
+#carousel-home .item {
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+#carousel-home .carousel-indicators li {
+  text-indent: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+  border:0px;
+  background-color: #cccac1;
+  color: #333333;
+  font-size: 11px;
+}
+#carousel-home .carousel-indicators li.active {
+  background-color: #b22d30;
+  color: white;
+  margin: 1px;
+}
+#carousel-home .arrow-right, #carousel-home .arrow-left {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -15px;
+}
+#carousel-home .fill-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+@media screen and (min-width: 768px) {
+    #carousel-home, #carousel-home .item {
+      height: 367px;
+    }
+}
+@media screen and (min-width: 992px) {
+
+
+  #carousel-home, #carousel-home .item {
+    height: 715px;
+  }
+}
+/* end: carousel home */
+
+
 /********************MEDIA QUERIES**************************/
+
+@media screen and (max-width: 360px) {
+  .navbar-brand {
+    float: none;
+  }
+
+  .contato-top {
+    margin: 0;
+  }
+
+  .navbar-famart {
+    background: #150958;
+    border-radius: 0px !important;
+  }
+
+  .navbar-famart .navbar-nav > li > a {
+    padding: 10px 25px !important;
+    margin-bottom: 0px;
+    color: #fff;
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .navbar-toggle {
+    background: #150958;
+    float: left;
+    margin-right: 0px;
+    display: block;
+  }
+
+  .icon-bar {
+    background: #fff;
+  }
+
+  .btn-agendado:hover {
+    color: #150958 !important;
+  }
+
+  .menu-mobile {
+    color: #fff;
+    margin-top: 15px;
+    font-weight: bold;
+    float: left;
+  }
+
+  .btn-agendado {
+    margin: 10px 0 10px -10px;
+  }
+
+  .box-info-add {
+    margin-top: 20px;
+  }
+
+  .btn-curso-interno {
+    width: 150px;
+  }
+
+  .btn-matricule {
+    width: 180px;
+  }
+
+  .box-call-matricule {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .titulo-curso {
+    height: 70px;
+  }
+
+  .selo-footer {
+    margin-left: 0 !important;
+  }
+
+  .alinha-link-footer {
+    margin-left: 0;
+  }
+
+  .navbar-nav > li {
+    float: none;
+    width: 100%;
+  }
+
+  .btn-agendado {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-famart {
+    background: #150958;
+    border-radius: 0px !important;
+  }
+
+  .navbar-famart .navbar-nav > li > a {
+    padding: 10px 25px !important;
+    margin-bottom: 0px;
+    color: #fff;
+  }
+
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .navbar-toggle {
+    background: #150958;
+    float: left;
+    margin-right: 0px;
+    display: block;
+  }
+
+  .icon-bar {
+    background: #fff;
+  }
+
+  .btn-agendado:hover {
+    color: #150958 !important;
+  }
+
+  .menu-mobile {
+    color: #fff;
+    margin-top: 15px;
+    font-weight: bold;
+    float: left;
+  }
+
+  .box-info-add {
+    margin-top: 30px;
+  }
+}
 
 @media screen and (min-width: 768px) {
   /*

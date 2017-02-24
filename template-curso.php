@@ -7,7 +7,9 @@
 
 <main>
   <div class="container">
-    <?php the_content() ?>
+    <div class="conteudo-template-curso">
+      <?php the_content() ?>
+    </div>
 
     <?php
       $wpcurso = new WP_Query ( array(
@@ -49,7 +51,16 @@
               </div>-->
 
               <div class="investimento">
-                <p>Matrícula:</p>
+                <?php
+                 $exibeValorCurso = get_field('exibir_valor_curso_ou_matricula');
+                  if ($exibeValorCurso == 'Matrícula') { ?>
+                    <p><?php echo $exibeValorCurso; ?></p>
+                  <?php
+                    }
+                    else { ?>
+                      <p><?php echo $exibeValorCurso?></p>
+                  <?php } ?>
+
                 <?php
                   $valor_de = get_field('valor_matricula');
                   $valor_por = get_field('valor_matricula_promocional');
@@ -64,10 +75,10 @@
                 <?php } ?>
 
               </div>
-          </div>
-          <div class="botoes-curso">
-            <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
-          </div>
+              <div class="botoes-curso">
+                <a class="btn btn-curso-interno" href="<?php echo get_permalink() ?>" role="button">Saiba Mais</a><a class="btn btn-matricule" href="<?php echo get_permalink() ?>?pre-matricula=sim" role="button">Inscreva-se</a>
+              </div>
+          </div>          
         </div>
         <?php
           if ($i % 4 == 0) {?>
