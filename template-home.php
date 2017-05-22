@@ -176,7 +176,7 @@
            wp_reset_query();
           ?>
         </div>
-        <p align="center"><a class="btn btn-noticia-home" href="http://famart.fourmedia.com.br/blog/" role="button">Ver todas</a></p>
+        <p align="center"><a class="btn btn-noticia-home" href="http://famart.edu.br/blog/" role="button">Ver todas</a></p>
       </div>
     </section>
 

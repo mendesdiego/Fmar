@@ -47,7 +47,7 @@
       <h3 class="titulo-footer">Revistas</h3>
       <ul class="list-unstyled menu-footer">
         <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
-          <a href="http://famart.fourmedia.com.br/wp-content/uploads/2016/12/revista-academica-inteligence-and-information-grupo-andrade-martins-2016-2.pdf" target="_blank" class="link-menu-footer">Resvista Acadêmica</a>
+          <a href="http://famart.edu.br/wp-content/uploads/2016/12/revista-academica-inteligence-and-information-grupo-andrade-martins-2016-2.pdf" target="_blank" class="link-menu-footer">Resvista Acadêmica</a>
         </li>
         <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
           <a href="http://www.rle.ucpel.tche.br/index.php/rle/index" target="_blank" class="link-menu-footer">Linguagem & Ensino</a>
@@ -79,7 +79,7 @@
           <a href="http://revistaseletronicas.pucrs.br/ojs/index.php/faced" target="_blank" class="link-menu-footer">Educação</a>
         </li>
         <li><img src="<?php echo get_template_directory_uri() ?>/images/setinha.png" alt="" class="icon-menu-footer">
-          <a href="http://famart.fourmedia.com.br/wp-content/uploads/2017/01/periodicos-de-pedagogia.pdf" target="_blank" class="link-menu-footer">Pedagogia</a>
+          <a href="http://famart.edu.br/wp-content/uploads/2017/01/periodicos-de-pedagogia.pdf" target="_blank" class="link-menu-footer">Pedagogia</a>
         </li>
       </ul>
     </div>
